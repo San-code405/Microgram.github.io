@@ -1,0 +1,9 @@
+/* WARNING: copyright 2021. Any distribution, editing or unauthorised use is strictly prohibited */
+.card{
+  display:inline-block;
+  height:50px;
+  width:100%;
+  margin:0;
+  padding:0;
+  border:1px solid #0f0;
+}

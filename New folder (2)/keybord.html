@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8"/>
+<title>android keyboard</title>
+<style>
+#btn {
+height:50px;
+width:30px;
+background-color:#00BEFF;
+border-radius:10px;
+font-family:consolas, "courier" , verdana;
+border:none;
+color:white;
+text-shadow:0px 2px 8px #0000ff;
+box-shadow:0px 6px 3px #0060FF;
+font-weight:bold;
+}
+.keyboard-container, .number-container{
+width:350px;
+height:250px;
+border-style:solid;
+border-color:#0000FF;
+border-width:1px;
+border-radius:5px;
+background-color:#00ffFF;
+text-align: center;
+font-size: 20px;
+}
+#textarea {
+height:350px;
+width:350px;
+border:1px solid blue;
+font-family:consolas, "courier", verdana;
+font-style: normal;
+font-size:15px;
+font-weight:bold;
+}
+.sign, input, .keyboard-shift {
+width:350px;
+height:250px;
+border-style:solid;
+border-color:#0000FF;
+border-width:1px;
+border-radius:5px;
+background-color:#00ffFF;
+text-align: center;
+font-size:20px;
+}
+</style>
+</head>
+<body onload="body()"><center><form name="keyboard">
+<textarea id="textarea" readonly></textarea>
+<div class="keyboard-container" id="num2"><br>
+<input type="button" autocapitalize="characters" value="Q" id="btn" onclick="q1()" style="font-size:20px;">
+<input type="button" value="W"id="btn" onclick="q2()" style="font-size:20px;">
+<input type="button" value="E"id="btn" onclick="q3()" style="font-size:20px;">
+<input type="button" value="R"id="btn" onclick="q4()" style="font-size:20px;">
+<input type="button" value="T" id="btn" onclick="q5()" style="font-size:20px;">
+<input type="button" value="Y" id="btn" onclick="q6()" style="font-size:20px;">
+<input type="button" value="U" id="btn" onclick="q7()" style="font-size:20px;">
+<input type="button" value="I"id="btn" onclick="q8()" style="font-size:20px;">
+<input type="button" value="O" id="btn" onclick="q9()" style="font-size:20px;">
+<input type="button" value="P" id="btn" onclick="q10()" style="font-size:20px;"><br>
+<input type="button" value="A" id="btn" onclick="q11()" style="font-size:20px;">
+<input type="button" value="S" id="btn" onclick="q12()" style="font-size:20px;">
+<input type="button" value="D" id="btn" onclick="q13()" style="font-size:20px;">
+<input type="button" value="F" id="btn" onclick="q14()" style="font-size:20px;">
+<input type="button" value="G" id="btn" onclick="q15()" style="font-size:20px;">
+<input type="button" value="H" id="btn" onclick="q16()" style="font-size:20px;">
+<input type="button" value="J" id="btn" onclick="q17()" style="font-size:20px;">
+<input type="button" value="K" id="btn" onclick="q18()" style="font-size:20px;">
+<input type="button" value="L" id="btn" onclick="q19()" style="font-size:20px;"><br>
+<input type="button" value="&#8679;" id="btn" onclick="shiftdaw()" style="font-size:20px; width:50px; background-color:#008FFF">
+<input type="button" value="Z" id="btn" onclick="q21()" style="font-size:20px;">
+<input type="button" value="X" id="btn" onclick="q22()" style="font-size:20px;">
+<input type="button" value="C" id="btn" onclick="q23()" style="font-size:20px;">
+<input type="button" value="V" id="btn" onclick="q24()" style="font-size:20px;">
+<input type="button" value="B" id="btn" onclick="q25()" style="font-size:20px;">
+<input type="button" value="N" id="btn" onclick="q26()" style="font-size:20px;">
+<input type="button" value="M" id="btn" onclick="q27()" style="font-size:20px;">
+<input type="button" value="&#8678;" id="btn" onclick="deletes()" style="font-size:20px; width:50px; background-color:#008FFF"><br>
+<input type="button" value="?23" id="btn" onclick="q29()" style="font-size:20px;width:50px; background-color:#008FFF">
+<input type="button" value="," id="btn" onclick="q30()" style="font-size:20px; background-color:#008FFF">
+<input type="button" value="space" id="btn" onclick="q31()" style="font-size:20px;width:170px;">
+<input type="button" value="." id="btn" onclick="q32()" style="font-size:20px; background-color:#008FFF">
+<input type="button"value="&#8626;" id="btn" onclick="qq()" style="width:50px;background-color:#008FFF">
+</div>
+<div id="num" class="number-container"><br>
+<input type="button" value="1" id="btn" onclick="document.keyboard.textarea.value+='00110001 '" style="font-size:20px;">
+<input type="button" value="2"id="btn" onclick="document.keyboard.textarea.value+='00110010 '" style="font-size:20px;">
+<input type="button" value="3"id="btn" onclick="document.keyboard.textarea.value+='00110011 '" style="font-size:20px;">
+<input type="button" value="4"id="btn" onclick="document.keyboard.textarea.value+='00110100 '" style="font-size:20px;">
+<input type="button" value="5" id="btn" onclick="document.keyboard.textarea.value+='00110101 '" style="font-size:20px;">
+<input type="button" value="6" id="btn" onclick="document.keyboard.textarea.value+='00110110 '" style="font-size:20px;">
+<input type="button" value="7" id="btn" onclick="document.keyboard.textarea.value+='00110111 '" style="font-size:20px;">
+<input type="button" value="8"id="btn" onclick="document.keyboard.textarea.value+='00111000 '" style="font-size:20px;">
+<input type="button" value="9" id="btn" onclick="document.keyboard.textarea.value+='00111001 '" style="font-size:20px;">
+<input type="button" value="0" id="btn" onclick="document.keyboard.textarea.value+='00110000 '" style="font-size:20px;"><br>
+<input type="button" value="@" id="btn" onclick="document.keyboard.textarea.value+='01000000 '" style="font-size:20px;">
+<input type="button" value="#" id="btn" onclick="document.keyboard.textarea.value+='00100011 '" style="font-size:20px;">
+<input type="button" value="$" id="btn" onclick="document.keyboard.textarea.value+='00100100 '" style="font-size:20px;">
+<input type="button" value="_" id="btn" onclick="document.keyboard.textarea.value+='01011111 '" style="font-size:20px;">
+<input type="button" value="&" id="btn" onclick="document.keyboard.textarea.value+='00100110 '" style="font-size:20px;">
+<input type="button" value="-" id="btn" onclick="document.keyboard.textarea.value+='00101101 '" style="font-size:20px;">
+<input type="button" value="+" id="btn" onclick="document.keyboard.textarea.value+='00101011 '" style="font-size:20px;">
+<input type="button" value="(" id="btn" onclick="document.keyboard.textarea.value+='00101000 '" style="font-size:20px;">
+<input type="button" value=")" id="btn" onclick="document.keyboard.textarea.value+='00101001 '" style="font-size:20px;">
+<input type="button" value="/" id="btn" onclick="document.keyboard.textarea.value+='00101111 '" style="font-size:20px;"><br>
+<input type="button" value="=\<" id="btn" onclick="signShow()" style="font-size:20px;width:50px;background-color:#008FFF">
+<input type="button" value="*" id="btn" onclick="document.keyboard.textarea.value+='00101010 '" style="font-size:20px;">
+<input type="button" value='"' id="btn" onclick="aa()" style="font-size:20px;">
+<input type="button" value="'" id="btn" onclick="aaa()" style="font-size:20px;">
+<input type="button" value=":" id="btn" onclick="document.keyboard.textarea.value+='00111010 '" style="font-size:20px;">
+<input type="button" value=";" id="btn" onclick="document.keyboard.textarea.value+='00111011 '" style="font-size:20px;">
+<input type="button" value="!" id="btn" onclick="document.keyboard.textarea.value+='00100001 '" style="font-size:20px;">
+<input type="button" value="?" id="btn" onclick="document.keyboard.textarea.value+='00111111 '" style="font-size:20px;">
+<input type="button" value="&#8678;" id="btn" onclick="deletes()" style="font-size:20px; width:50px;background-color:#008FFF" style="font-size:20px;"><br>
+<input type="button" value="ABC" id="btn" onclick="ABC()" style="font-size:20px;width:50px; background-color:#008FFF">
+<input type="button" value="," id="btn" onclick="document.keyboard.textarea.value+='00101100 '" style="font-size:20px; background-color:#008FFF">
+<input type="button" value="space" id="btn" onclick="q31()" style="font-size:20px;width:170px;">
+<input type="button" value="." id="btn" onclick="document.keyboard.textarea.value+='00101110 '" style="font-size:20px; background-color:#008FFF">
+<input type="button"value="&#8626;" id="btn" onclick="q33()" style="width:50px;background-color:#008FFF">
+</div>
+<div class="sign" id="sign"><br>
+<input type="button" id="btn" value="~" onclick="document.keyboard.textarea.value+='01111110 '">
+<input type="button" id="btn" value="`" onclick="document.keyboard.textarea.value+='01100000 '">
+<input type="button" id="btn" value="|" onclick="document.keyboard.textarea.value+='01111100 '">
+<input type="button" id="btn" value="•" onclick="document.keyboard.textarea.value+='0010000000100010 '">
+<input type="button" id="btn" value="√" onclick="document.keyboard.textarea.value+='0010001000011010 '">
+<input type="button" id="btn" value="π" onclick="document.keyboard.textarea.value+='0000001111000000 '">
+<input type="button" id="btn" value="÷" onclick="document.keyboard.textarea.value+='11110111 '">
+<input type="button" id="btn" value="×" onclick="document.keyboard.textarea.value+='11010111 '">
+<input type="button" id="btn" value="¶" onclick="document.keyboard.textarea.value+='10110110 '">
+<input type="button" id="btn" value="∆" onclick="document.keyboard.textarea.value+='0010001000000110 '"><br>
+<input type="button" id="btn" value="£" onclick="document.keyboard.textarea.value+='10100011 '">
+<input type="button" id="btn" value="¢" onclick="document.keyboard.textarea.value+='10100010 '">
+<input type="button" id="btn" value="€" onclick="document.keyboard.textarea.value+='0010000010101100 '">
+<input type="button" id="btn" value="¥" onclick="document.keyboard.textarea.value+='10100101 '">
+<input type="button" id="btn" value="^" onclick="document.keyboard.textarea.value+='01011110 '">
+<input type="button" id="btn" value="°" onclick="document.keyboard.textarea.value+='10110000 '">
+<input type="button" id="btn" value="=" onclick="document.keyboard.textarea.value+='00111101 '">
+<input type="button" id="btn" value="{" onclick="document.keyboard.textarea.value+='01111011 '">
+<input type="button" id="btn" value="}" onclick="document.keyboard.textarea.value+='01111101 '">
+<input type="button" id="btn" value="\" onclick="document.keyboard.textarea.value+='01011100 '"><br>
+<input type="button" id="btn" value="?23" onclick="numshow()" style="width:50px;background-color:#008FFF;">
+<input type="button" id="btn" value="%" onclick="document.keyboard.textarea.value+='00100101 '">
+<input type="button" id="btn" value="©" onclick="document.keyboard.textarea.value+='10101001 '">
+<input type="button" id="btn" value="®" onclick="document.keyboard.textarea.value+='10101110 '">
+<input type="button" id="btn" value="™" onclick="document.keyboard.textarea.value+='0010000100100010 '">
+<input type="button" id="btn" value="✓" onclick="document.keyboard.textarea.value+='0010011100010011 '">
+<input type="button" id="btn" value="[" onclick="document.keyboard.textarea.value+='01011011 '">
+<input type="button" id="btn" value="]" onclick="document.keyboard.textarea.value+='01011101 '">
+<input type="button" value="&#8678;" id="btn" onclick="deletes()" style="font-size:20px; width:50px; background-color:#008FFF"><br>
+<input type="button" id="btn" value="ABC" onclick="ABC()" style="width:50px;background-color:#008FFF">
+<input type="button" id="btn" value="<" onclick="document.keyboard.textarea.value+='00111100 '" style="background-color:#008FFF">
+<input type="button" value="space" id="btn" onclick="q31()" style="font-size:20px;width:170px;">
+<input type="button" id="btn" value=">" onclick="document.keyboard.textarea.value+='00111110 '" style="background-color:#008FFF">
+<input type="button"value="&#8626;" id="btn" onclick="q33()" style="width:50px;background-color:#008FFF">
+</div>
+<div class="keyboard-shift" id="num3"><br>
+<input type="button" value="q" id="btn" onclick="document.keyboard.textarea.value+='01110001 '" style="font-size:20px;">
+<input type="button" value="w"id="btn" onclick="document.keyboard.textarea.value+='01110111 '" style="font-size:20px;">
+<input type="button" value="e"id="btn" onclick="document.keyboard.textarea.value+='01100101 '" style="font-size:20px;">
+<input type="button" value="r"id="btn" onclick="document.keyboard.textarea.value+='01110010 '" style="font-size:20px;">
+<input type="button" value="t" id="btn" onclick="document.keyboard.textarea.value+='01110100 '" style="font-size:20px;">
+<input type="button" value="y" id="btn" onclick="document.keyboard.textarea.value+='01111001 '" style="font-size:20px;">
+<input type="button" value="u" id="btn" onclick="document.keyboard.textarea.value+='01110101 '" style="font-size:20px;">
+<input type="button" value="i"id="btn" onclick="document.keyboard.textarea.value+='01101001 '" style="font-size:20px;">
+<input type="button" value="o" id="btn" onclick="document.keyboard.textarea.value+='01101111 '" style="font-size:20px;">
+<input type="button" value="p" id="btn" onclick="document.keyboard.textarea.value+='01110000 '" style="font-size:20px;"><br>
+<input type="button" value="a" id="btn" onclick="document.keyboard.textarea.value+='01100001 '" style="font-size:20px;">
+<input type="button" value="s" id="btn" onclick="document.keyboard.textarea.value+='01110011 '" style="font-size:20px;">
+<input type="button" value="d" id="btn" onclick="document.keyboard.textarea.value+='01100100 '" style="font-size:20px;">
+<input type="button" value="f" id="btn" onclick="document.keyboard.textarea.value+='01100110 '" style="font-size:20px;">
+<input type="button" value="g" id="btn" onclick="document.keyboard.textarea.value+='01100111 '" style="font-size:20px;">
+<input type="button" value="h" id="btn" onclick="document.keyboard.textarea.value+='01101000 '" style="font-size:20px;">
+<input type="button" value="j" id="btn" onclick="document.keyboard.textarea.value+='01101010 '" style="font-size:20px;">
+<input type="button" value="k" id="btn" onclick="document.keyboard.textarea.value+='01101011 '" style="font-size:20px;">
+<input type="button" value="l" id="btn" onclick="document.keyboard.textarea.value+='01101100 '" style="font-size:20px;"><br>
+<input type="button" value="&#8679;" id="btn" onclick="shiftdaw1()" style="font-size:20px; width:50px; background-color:#008FFF">
+<input type="button" value="z" id="btn" onclick="document.keyboard.textarea.value+='01111010 '" style="font-size:20px;">
+<input type="button" value="x" id="btn" onclick="document.keyboard.textarea.value+='01111000 '" style="font-size:20px;">
+<input type="button" value="c" id="btn" onclick="document.keyboard.textarea.value+='01100011 '" style="font-size:20px;">
+<input type="button" value="v" id="btn" onclick="document.keyboard.textarea.value+='01110110 '" style="font-size:20px;">
+<input type="button" value="b" id="btn" onclick="document.keyboard.textarea.value+='01100010 '" style="font-size:20px;">
+<input type="button" value="n" id="btn" onclick="document.keyboard.textarea.value+='01101110 '" style="font-size:20px;">
+<input type="button" value="m" id="btn" onclick="document.keyboard.textarea.value+='01101101 '" style="font-size:20px;">
+<input type="button" value="&#8678;" id="btn" onclick="deletes()" style="font-size:20px; width:50px; background-color:#008FFF"><br>
+<input type="button" value="?23" id="btn" onclick="q29()" style="font-size:20px;width:50px; background-color:#008FFF">
+<input type="button" value="," id="btn" onclick="q30()" style="font-size:20px; background-color:#008FFF">
+<input type="button" value="space" id="btn" onclick="q31()" style="font-size:20px;width:170px;">
+<input type="button" value="." id="btn" onclick="q32()" style="font-size:20px; background-color:#008FFF">
+<input type="button"value="&#8626;" id="btn" onclick="qq()" style="width:50px;background-color:#008FFF">
+</div>
+</center></form>
+<script>
+function shiftdaw1() {
+document.getElementById("num3").style.display="none";
+document.getElementById("num2").style.display="block";
+}
+function shiftdaw() {
+document.getElementById("num3").style.display="block";
+document.getElementById("num2").style.display="none";
+}
+function numshow() {
+document.getElementById("sign").style.display="none";
+document.getElementById("num").style.display="block";
+document.getElementById("num3").style.display="none";
+}
+function signShow() {
+document.getElementById("sign").style.display="block";
+document.getElementById("num").style.display="none";
+}
+function aaa() {
+document.getElementById("textarea").value+="00100111 ";
+}
+function aa() {
+document.getElementById("textarea").value+='00100010 ';
+}
+function ABC() {
+document.getElementById("num").style.display="none";
+document.getElementById("num2").style.display="block";
+document.getElementById("sign").style.display="none";
+document.getElementById("num3").style.display="none";
+}
+function q1() {
+document.getElementById("textarea").value+='01010001'+" ";}
+function q2() {
+var w='01010111'+" ";
+document.getElementById("textarea").value+=w;}
+function q3() {
+var w='01000101'+" ";
+document.getElementById("textarea").value+=w;}
+function q4() {
+var q='01010010'+" ";
+document.getElementById("textarea").value+=q;}
+function q5() {
+var w='01010100'+" ";
+document.getElementById("textarea").value+=w;}
+function q6() {
+var w='01011001'+" ";
+document.getElementById("textarea").value+=w;}
+function q7() {
+var q='01010101'+" ";
+document.getElementById("textarea").value+=q;}
+function q8() {
+var w='01001001'+" ";
+document.getElementById("textarea").value+=w;}
+function q9() {
+var w='01001111'+" ";
+document.getElementById("textarea").value+=w;}
+function q10() {
+var q='01010000'+" ";
+document.getElementById("textarea").value+=q;}
+function q11() {
+var w='01000001'+" ";
+document.getElementById("textarea").value+=w;}
+function q12() {
+var w='01010011'+" ";
+document.getElementById("textarea").value+=w;}
+function q13() {
+var q='01000100'+" ";
+document.getElementById("textarea").value+=q;}
+function q14() {
+var w='01000110'+" ";
+document.getElementById("textarea").value+=w;}
+function q15() {
+var w='01000111'+" ";
+document.getElementById("textarea").value+=w;}
+function q16() {
+var q='01001000'+" ";
+document.getElementById("textarea").value+=q;}
+function q17() {
+var w='01001010'+" ";
+document.getElementById("textarea").value+=w;}
+function q18() {
+var w='01001011'+" ";
+document.getElementById("textarea").value+=w;}
+function q19() {
+var q='01001100'+" ";
+document.getElementById("textarea").value+=q;}
+function q20() {
+if (document.getElementById("btn").autocapitalize="characters") {
+document.getElementById("btn").autocapitalize="off";
+}}
+function q21() {
+var w='01011010'+" ";
+document.getElementById("textarea").value+=w;}
+function q22() {
+var q='01011000'+" ";
+document.getElementById("textarea").value+=q;}
+function q23() {
+var w='01000011'+" ";
+document.getElementById("textarea").value+=w;}
+function q24() {
+var w='01010110'+" ";
+document.getElementById("textarea").value+=w;}
+function q25() {
+var q='01000010'+" ";
+document.getElementById("textarea").value+=q;}
+function q26() {
+var w='01001110'+" ";
+document.getElementById("textarea").value+=w;}
+function q27() {
+var w='01001101'+" ";
+document.getElementById("textarea").value+=w;}
+function deletes() {
+var value=document.getElementById("textarea").value;
+document.getElementById("textarea").value=value.substr(0, value.length -9);}
+function q29() {
+document.getElementById("num2").style.display='none';
+document.getElementById("num3").style.display="none";
+document.getElementById("num").style.display='block';}
+function q30() {
+var w='00101100'+" ";
+document.getElementById("textarea").value+=w;}
+function q31() {
+var q=' ';
+document.getElementById("textarea").value+=q;}
+function q32() {
+var w='00101110'+" ";
+document.getElementById("textarea").value+=w;}
+function q33() {
+document.getElementById("textarea").value+="\n";}
+function body() {
+document.getElementById("num").style.display='none';
+document.getElementById("sign").style.display='none';
+document.getElementById("num3").style.display='none';
+}
+function qq() {
+document.getElementById("textarea").value+="\n";}
+</script>
+</body>
+</html>

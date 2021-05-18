@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Report</title>
+  <style>
+
+    * {
+      text-decoration:none;
+      font-family: calibri;
+      font-size: 1.5rem;
+      word-break:keep-all;
+      word-wrap:break-word;
+      outline: none;
+    }
+
+    html {
+      overflow:hidden;
+      width:100%;
+    }
+
+    script {
+      display:none;
+    }
+
+   .canvas{
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     position:absolute;
+     z-index:-1;
+   }
+
+   body{
+     display: ;
+     min-height: 100%;
+     background: #232425f1;
+     color:#fff;
+     margin:0;
+     padding:0;
+     width:100%;
+   }
+
+   .container {
+     width:100%;
+   }
+
+   .container textarea {
+     background:rgba(255,255,255,0.05);
+     margin:10px 5%;
+     padding:5px;
+     width:90%;
+     height:300px;
+     border-radius:0px;
+     border:1px solid rgba(255,255,255,0.5);
+     backdrop-filter:blur(1px);
+     resize: none;
+     color:#fff;
+   }
+
+   .container a, .container input[type='submit'] {
+    transition:0.5s;
+    position:relative;
+    margin:20px 5px 0;
+    padding:10px 20px;
+    text-decoration: none;
+    border:1.5px solid #fff;
+    display:inline-block;
+    color:#fff;
+    font-family: calibri;
+    font-size:1.3rem;
+    outline:none;
+    background-color:transparent;
+    cursor:pointer;
+  }
+
+  .container a:hover, .container input[type='submit']:hover {
+    border:1px solid #000;
+    background:#fff;
+    color:#000;
+  }
+
+  header .title h1 {
+    margin:0;
+    padding:0;
+    font-family:calibri;
+    font-size:110%;
+    font-weight:30;
+    color:#fff;
+  }
+
+  header .title {
+    display:flex;
+    background-color: #000;
+  }
+
+  header .title .clock {
+    display:flex;
+    margin-left: auto;
+  }
+
+  header .title .clock h4 {
+   margin:0;
+   padding:0;
+   font-family:calibri;
+   font-size:110%;
+   font-weight:20;
+   color:#fff;
+  }
+
+  header .title .back {
+   margin-top:7px;
+   margin-right:10px;
+   margin-bottom:7px;
+   margin-left:7px;
+   padding:9px;
+   border-radius: 50%;
+   width:20px;
+   height:20px;
+   overflow:hidden;
+   border:1px solid #fff;
+   background-color:rgba(255,255,255,0.1);
+  }
+
+  header .title .back svg {
+   width:28px;
+   height:28px;
+  }
+
+  header .title .back:hover {
+   background-color:rgba(255,255,255,0.4);
+  }
+
+  @media (max-width:500px){
+
+    strong, p, h1, h2, h3, b, body, pre, a, th, td, div, span, input, textarea, tr, button, center{
+      font-size:2rem;
+    }
+
+    container textarea {
+      font-size:40px;
+    }
+
+     a,  input {
+      font-size:2rem;
+    }
+
+    i {
+      font-size:1.6rem;
+    }
+
+    header {
+      display:none;
+    }
+
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="title">
+      <a onclick='history.back()'  class='back' ><svg width="55px" height="55px" xmlns="http://www.w3.org/2000/svg" fill-rule="none" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" clip-rule="none"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z" style='stroke:#fff;'/></svg></a>
+      <h1>Report</h1>
+      <span class="clock">
+        <h4 class="clock-time"></h4>
+      </span>
+    </div>
+  </header>
+
+<div class="container">
+  <br>
+  <p></p>
+  <br>
+  <form action="" method="GET">
+    <textarea name="report" id="report" autofocus placeholder='Please write your report here.'></textarea>
+    <br>
+     <input type="submit"><a onclick='history.back()'>Back</a><a href="report.html">Refresh</a>
+  </form>
+</div>
+
+ <canvas id="canvas" class='canvas'></canvas>
+
+ <script type="text/javascript">
+   var canvas = document.getElementById("canvas");
+   var context = canvas.getContext("2d");
+
+   canvas.height = window.innerHeight;
+   canvas.width = window.innerWidth;
+
+   var binary = "H471XN7504PQZWX";
+   binary = binary.split("");
+   var font_size = 20;
+
+   var columns = canvas.width/font_size;
+   var drops = [];
+
+   for(var x=0;x < columns; x++)
+   drops[x] = 1;
+
+   function draw () {
+       context.fillStyle = "rgba(0,0,0,0.05)";
+       context.fillRect(0,0, canvas.width, canvas.height);
+       context.fillStyle = "#0f0";
+       context.font = font_size + "px arial";
+
+       for(var i=0;i < drops.length; i++) {
+           var text = binary[Math.floor(Math.random() * binary.length)];
+           context.fillText(text, i * font_size, drops[i] * font_size);
+
+           if(drops[i] * font_size > canvas.height && Math.random() > 0.975)
+           drops[i]=0;
+           drops[i]++;
+       }
+   }
+   setInterval(draw, 30);
+
+   window.addEventListener('resize',
+       function() {
+           canvas.width = innerWidth;
+           canvas.height = innerHeight;
+           draw();
+       }
+   );
+
+
+ </script>
+
+ <!-- NOTE: time clock script -->
+
+ <script src='C:\Users\nelson khoza\Desktop\New folder (2)\home\all.js'></script>
+</body>
+</html>

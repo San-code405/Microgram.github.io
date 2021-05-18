@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+*{
+  font-size:20px;
+}
+
+
+body {
+    background:#FFF;
+}
+
+.button {
+    background-color: rgba(250,0,0,1);
+    border: none;
+    color: white;
+    padding:0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    margin:1%;
+    cursor: pointer;
+    width:23%;
+    height:80px;
+    opacity:1;
+    overflow:hidden;
+}
+
+table {
+width:100%;
+height:auto;
+}
+
+table, tr, td, th {
+border:2px solid black;
+}
+
+td, th {
+font-size:1em;
+}
+
+tr, th, td {
+margin:0;
+padding:0;
+background-color:rgba(,255,255,255,0.5);
+}
+
+th{
+font-weight:3px;
+}
+
+.second_button, .s2{
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    color: #000000;
+    padding:0;
+    text-align:left;
+    text-decoration: serif;
+    display: inline-block;
+    font-size: 60px;
+    margin:0;
+    cursor: pointer;
+    width:100%;
+    height:150px;
+    opacity:0.8;
+    float:left;
+}
+
+#span1 {
+display:flex;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+}
+
+#span2 {
+width:100%;
+}
+
+h1 {
+font-size:4em
+}
+
+.hr1{
+border:#777777;
+}
+
+#intro_terms{
+display:none;
+font-size:1em;
+}
+
+.info, .nested{
+display:none;
+width:100%;
+}
+
+.info {
+font-size:3.5em;
+height:auto;
+
+}
+
+.s2 {
+display:none;
+}
+
+#private_information_we_share1, #private_information_we_share2, #coockies_policy1, #coockies_policy2, #how_to_contact_us1, #how_to_contact_us2 {
+background-color:#ffffff;
+opacity:0.9999;
+}
+
+.arrowright {
+display:flex;
+height:150px;
+width:100px;
+float:right;
+}
+
+</style>
+</head>
+<body>
+
+<span id="span1">
+
+<button class="button" id="button1" onclick="">&#127969</button>
+
+<button class="button" id="button2" onclick=""><?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.25 32" width="110px" height="80px"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title>Asset 16</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><rect class="cls-1" x="1" y="1" width="45.25" height="30" rx="1"/><path class="cls-1" d="M46.25,2l-22,17.78a1,1,0,0,1-1.29,0L1,2"/><line class="cls-1" x1="45.5" y1="31" x2="28.95" y2="16"/><line class="cls-1" x1="2" y1="31" x2="18" y2="16.5"/></g></g></svg></button>
+
+<button class="button" id="button3" onclick=""><?xml version="1.0" encoding="UTF-8"?>
+<svg width="110px" height="80px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>17. Bell</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="17.-Bell" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(2.000000, 3.000000)" stroke="#222F3E" stroke-width="4">
+            <path d="M1,82.6624363 C10.0657813,75.4737565 15.7929233,64.902803 15.7929233,53.117652 L15.7929233,38.411768 C15.7929233,22.1680971 30.2998277,9 48.1950012,9 C66.0901747,9 80.5970791,22.1680971 80.5970791,38.411768 L80.5970791,53.117652 C80.5970791,64.9028045 86.3242225,75.4737592 95.3899994,82.6624363" id="Layer-1"></path>
+            <ellipse id="Layer-2" cx="48" cy="84.6" rx="48" ry="9.6"></ellipse>
+            <path d="M59.6423952,76 C58.7027212,81.6902897 53.7598241,86.0302232 47.8032814,86.0302232 C41.9187538,86.0302232 37.0235101,81.7945959 36,76.2057913" id="Layer-3"></path>
+            <path d="M38,10 C38,4.4771525 42.4771525,0 48,0 C53.5228475,0 58,4.4771525 58,10" id="Layer-4"></path>
+        </g>
+    </g>
+</svg></button>
+
+<button class="button" id="button4" onclick=""><?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg id="i-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"  fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="125px" height="95px">
+    <path d="M4 8 L28 8 M4 16 L28 16 M4 24 L28 24" />
+</svg></button>
+
+</span>
+
+<div id="span2">
+
+<hr class="hr1">
+<hr class="hr1">
+<hr class="hr1">
+<hr class="hr1">
+<hr class="hr1">
+<hr class="hr1">
+<hr class="hr1">
+<hr class="hr1">
+<hr class="hr1">
+<hr class="hr1">
+<hr class="hr1">
+<hr class="hr1">
+<hr class="hr1">
+<hr class="hr1">
+
+</div>
+
+<div id="span3">
+
+<button class="second_button" onclick="profile()">Profile<button>
+
+<button class="second_button">Invite someone to Lucky Fly<button>
+
+<button onclick="Xxx_terms()" class="second_button">Terms and conditions<button>
+
+<button class="second_button">Settings<button>
+
+<button class="second_button">Logout<button>
+
+</div>
+<div id="intro_terms">
+<div>
+<p>Welcome to microgram.<br>
+Micro gram build and develop technologies and services that allows and enable people to connect and communicate with each other, build communities and grow businesses.<br><br>
+
+We don't sell your personal data to advertisers, and we don't share information that directly identifies you (such as your name, email, address or other contact information) with advertiser unless you give us specific permission.<br><br>
+
+By signing up for micro gram, you accept our privacy and policy and agree not to violate the rules:<ol type="1" >
+<li>Nudity or other sexually suggestive content.</li>
+<li>Hate speech or credible threats</li>
+<li>Fake or impostor profiles</li></ol>
+You're responsible for any activities that occur under your screen name. You're responsible for keeping your password secure, you must not harass, threaten, interrogate or intimidate any of your microgram user.</p>
+</div>
+
+<button class="second_button" id="privacy_policy1" onclick="privacy_policy()">Privacy policy</button>
+
+<button id="privacy_policy2" class="s2" onclick="privacy_policy2()">Privacy policy</button>
+<span id="privacy_policy" class="nested">
+
+<button id="private_information_we_share1" class="second_button" onclick="private_information_we_share_about_you()">Private information we share about you</button>
+
+<button id="private_information_we_share2" class="s2" onclick="private_information_we_share_about_you2()">Private information we collect about you</button>
+
+<span class="info"  id="private_information_we_share">
+<p style="font-size:0.8em">If you use Microgram, or any service Microgram provide you agree that we can collect information about your:</p>
+<ol type="1" style="font-size:0.8em" >
+
+<li>Name and surname</li>
+
+<li>Your age</li>
+
+<li>Public information you share on our website e.g public posts (your conversations with your friends won't be collected and your connection will be encrypted)</li>
+
+<li>Casor movements</li>
+
+<li>Location</li>
+
+<li>Picture (profile picture), where you work, where you went for school etc.</li>
+
+</ol>
+
+<table>
+
+<caption>How do we use the information we collect from you.</caption>
+
+<tr>
+
+<th>Information we collect</th>
+<th>Usage</th>
+
+</tr>
+<tr>
+
+<th>Name and surname</th>
+<td>We need your name and surname to identify you</td>
+
+</tr>
+<tr>
+
+<th>Your age</th>
+<td>We use your age to remove content is restricted for your age group or that may harm you we also provide you with content you may like.</td>
+
+</tr>
+<tr>
+
+<th>Public information you share on our website</th>
+<td>We use this information to learn more about what you like or dislike and provide you with content that you like and also remove what you don't like.</td>
+
+</tr>
+<tr>
+
+<th>Casor movements</th>
+<td>We use information about your castor movements to know if you are or you are not a robot.</td>
+
+</tr>
+<tr>
+
+<th>Location</th>
+<td>Different places have different laws, beliefs, cultures and things they want, need or interested in so we also use this information to know what to advertise to you and what to not.</td>
+
+</tr>
+<tr>
+
+<th>Picture (profile picture), where you work, where you went for school etc.</th>
+<td>Since there are many people with the same name and surname using this website, we decided to take additional information about you this helps to uniquely identify you from others it also helps when a friend or family is searching for you in the website.</td>
+
+</tr>
+<tr>
+
+<th>Your files and other software you have.</th>
+<td>This information helps us to know if your device has Malicious codes and help devices not to be infected by malicious codes</td>
+
+</tr>
+
+</table>
+
+<h3>Our privacy concerns</h3>
+
+<p style="font-size:0.8em">We value your privacy that's why we make a promise to not share your private information with third parties, encrypt your private information and protect it against cyber attacks.</p>
+
+</span>
+
+<button class="second_button" id="coockies_policy1" onclick="coockies_policy()">Cookies policy</button>
+
+<button id="coockies_policy2" class="s2" onclick="coockies_policy2()">Cookies policy</button>
+
+<span class="info" id="coockies_policy"><p style="font-size:0.8em">
+Microgram uses cookies to provide you better experience, the information Microgram collects from your cookies won't be shared with a third party and will be protected from cyber attacks.</p>
+<h3>What are cookies?</h3>
+<p style="font-size:0.8em">Cookies are</p>
+
+<table>
+<tr>
+
+<th>Information we collect</th>
+<th>Usage</th>
+
+</tr>
+<tr>
+
+<th>We look at how many accounts you made.</th>
+<td>This helps us know if you are a scammer</td>
+
+</tr>
+<tr>
+
+<th>We look at websites you visit.</th>
+<td>This helps us know what you may be interested in. (we don't look at your website activities.)</td>
+
+</tr>
+<tr>
+
+<th></th>
+<td></td>
+
+</tr>
+</table>
+
+</span>
+
+<button class="second_button" id="how_to_contact_us1" onclick="how_to_contact_us()">How to contact us</button>
+
+<button id="how_to_contact_us2" class="s2" onclick="how_to_contact_us2()">How to contact us</button>
+
+<span class="info" id="how_to_contact_us"><p>Micro gram build and develop technologies and services that allows and enable people to connect</p></span>
+
+</span>
+
+<button class="second_button" id="data_policy1" onclick="data_policy()">Data policy</button>
+
+<button  id="data_policy2" class="s2" onclick="data_policy2()">Data policy</button>
+
+<span class="info" id="data_policy"><p>Micro gram build and develop technologies and services that allows and enable people to connect</p></span>
+
+<button class="second_button" id="terms1" onclick="terms()">Terms</button>
+
+<button id="terms2" class="s2" onclick="terms2()">Terms</button>
+
+<span class="info" id="terms"><p>Micro gram build and develop technologies and services that allows and enable people to connect</p></span>
+
+<button class="second_button" id="conditions1" onclick="conditions()">Conditions</button>
+
+<button class="s2" id="conditions2" onclick="conditions2()">Conditions</button>
+
+<span class="info" id="conditions"><p>Micro gram build and develop technologies and services that allows and enable people to connect</p></span>
+
+<button class="second_button" id="help_and_support1" onclick="help_and_support()">Help and support
+</button>
+
+<button class="s2" id="help_and_support2" onclick="help_and_support2()">Help and support
+</button>
+
+<span class="info" id="help_and_support"><p>Micro gram build and develop technologies and services that allows and enable people to connect</p></span>
+
+<button class="second_button" id="" onclick="Back1()">Back</button>
+</div>
+
+<!--   privacy policy.  -->
+
+<script type="text/JavaScript">
+
+function privacy_policy() {
+document.getElementById("privacy_policy").style.display = "block";
+document.getElementById("privacy_policy1").style.display = "none";
+document.getElementById("privacy_policy2").style.display = "block";
+}
+
+function private_information_we_share_about_you() {
+document.getElementById("private_information_we_share").style.display = "block";
+
+document.getElementById("private_information_we_share1").style.display = "none";
+
+document.getElementById("private_information_we_share2").style.display = "block";
+
+}
+
+function coockies_policy() {
+document.getElementById("coockies_policy").style.display = "block";
+
+document.getElementById("coockies_policy1").style.display = "none";
+
+document.getElementById("coockies_policy2").style.display = "block";
+
+}
+
+function how_to_contact_us() {
+document.getElementById("how_to_contact_us").style.display = "block";
+
+document.getElementById("how_to_contact_us1").style.display = "none";
+
+document.getElementById("how_to_contact_us2").style.display = "block";
+
+}
+
+function data_policy() {
+document.getElementById("data_policy").style.display = "block";
+
+document.getElementById("data_policy1").style.display = "none";
+
+document.getElementById("data_policy2").style.display = "block";
+
+}
+
+function terms() {
+document.getElementById("terms").style.display = "block";
+
+document.getElementById("terms1").style.display = "none";
+
+document.getElementById("terms2").style.display = "block";
+
+}
+
+function conditions() {
+document.getElementById("conditions").style.display = "block";
+
+document.getElementById("conditions1").style.display = "none";
+
+document.getElementById("conditions2").style.display = "block";
+
+}
+
+function help_and_support() {
+document.getElementById("help_and_support").style.display = "block";
+
+document.getElementById("help_and_support1").style.display = "none";
+
+document.getElementById("help_and_support2").style.display = "block";
+
+}
+
+//button 2//
+
+function privacy_policy2() {
+document.getElementById("privacy_policy").style.display = "none";
+document.getElementById("privacy_policy1").style.display = "block";
+document.getElementById("privacy_policy2").style.display = "none";
+}
+
+function private_information_we_share_about_you2() {
+document.getElementById("private_information_we_share").style.display = "none";
+
+document.getElementById("private_information_we_share1").style.display = "block";
+
+document.getElementById("private_information_we_share2").style.display = "none";
+
+}
+
+function coockies_policy2() {
+document.getElementById("coockies_policy").style.display = "none";
+
+document.getElementById("coockies_policy1").style.display = "block";
+
+document.getElementById("coockies_policy2").style.display = "none";
+
+}
+
+function how_to_contact_us2() {
+document.getElementById("how_to_contact_us").style.display = "none";
+
+document.getElementById("how_to_contact_us1").style.display = "block";
+
+document.getElementById("how_to_contact_us2").style.display = "none";
+
+}
+
+function data_policy2() {
+document.getElementById("data_policy").style.display = "none";
+
+document.getElementById("data_policy1").style.display = "block";
+
+document.getElementById("data_policy2").style.display = "none";
+
+}
+
+function terms2() {
+document.getElementById("terms").style.display = "none";
+
+document.getElementById("terms1").style.display = "block";
+
+document.getElementById("terms2").style.display = "none";
+
+}
+
+function conditions2() {
+document.getElementById("conditions").style.display = "none";
+
+document.getElementById("conditions1").style.display = "block";
+
+document.getElementById("conditions2").style.display = "none";
+
+}
+
+function help_and_support2() {
+document.getElementById("help_and_support").style.display = "none";
+
+document.getElementById("help_and_support1").style.display = "block";
+
+document.getElementById("help_and_support2").style.display = "none";
+
+}
+
+function Back1() {
+document.getElementById("intro_terms").style.display = "none";
+
+document.getElementById("span1").style.display = "flex";
+
+document.getElementById("span2").style.display = "block";
+
+document.getElementById("span3").style.display = "block";
+
+}
+
+//none of your business
+
+function Xxx_terms() {
+
+document.getElementById("intro_terms").style.display = "block";
+
+document.getElementById("span1").style.display = "none";
+
+document.getElementById("span2").style.display = "none";
+
+document.getElementById("span3").style.display = "none";
+
+}
+
+</script>
+</body>
+</html>

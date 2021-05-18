@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+margin:0;
+padding:0;
+width:100%;
+height:100%;
+}
+#xxx{
+display:none;
+position:relative;
+top:350px;
+background-color:#060c41;
+justify-content:center;
+height:500px;
+width:100%;
+Z-index:2px;
+/*border:1px solid black;*/
+}
+
+.reactions {
+    background-color:#060c41;
+    border: none;
+    color: white;
+    padding:0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 3em;
+    margin:0;
+    cursor: pointer;
+    width:31.505%;
+    height:135px;
+    /*opacity:1;*/
+    overflow:hidden;
+}
+
+#span1 {
+display:inline-block;
+position:relative;
+top:110.5px;
+left:0;
+height:269px;
+width:100%;
+border:none;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+background-color:#060c21;
+/*z-index:;*/
+}
+
+#show {
+width:100px;
+height:50px;
+}
+
+h1{
+font-size:5em
+}
+
+.hr1{
+border:#777777;
+}
+
+</style>
+</head>
+<body>
+<button id="show"
+onclick="reaction_box()">button</button>
+<section id="xxx">
+<span id="span1">
+<button class="reactions" id="button1">&#128514;<br>Haha<button>
+
+<button class="reactions" id="button2">&#128077;<br>Like<button>
+
+<button class="reactions" id="button3">&#128078;<br>Don't like<button>
+
+<button class="reactions" id="button4">&#128557;<br>Sad<button>
+
+<button class="reactions" id="button5">&#10084;<br>Love<button>
+
+<button class="reactions" id="button6">&#128562;<br>Wow<button>
+<script type="text/JavaScript">
+function reaction_box() {
+    document.getElementById("xxx").style.display = "block";
+}
+</script>
+</span>
+</section>
+</body>
+</html>

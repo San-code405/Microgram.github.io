@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+* {
+font-family:serif, sans-serif;
+}
+
+body {
+border:none;
+background:#00FFFF;
+margin:0;
+padding:0;
+height:549.9px;
+}
+
+#names {
+align-items:center;
+display:;
+float:right;
+position:relative;
+margin:0;
+font-size:large;
+height:500px;
+width:48%;
+right:0px;
+top:0px;
+padding:;
+text-align:center;
+justify-content: center;
+overflow: hidden;
+margin: 0;
+padding: 0;
+transform: translateY(-400px)
+}
+
+span, #profile_pic_div {
+background-color:none ;
+position:relative;
+display:flex;
+border:1px solid #000000;
+box-sizing: border-box;
+top:0;
+left:0;
+width:500px;
+height:480px;
+z-index:0;
+float:left;
+margin:0;
+padding:1;
+justify-content: center;
+}
+
+#profile_pic_div {
+overflow:none;
+}
+
+#profile {
+background-color:white;
+float:left;
+margin:0;
+position:relative;
+display:flex;
+top:409px;
+left:0;
+bottom:;
+align-items:left;
+border:none;
+opacity:0.7;
+height:66px;
+justify-content: center;
+transform: translateY(-475px);
+}
+
+#like, .picked_profile {
+    background-color: rgba(255,255,255,0.0);
+    border:none;
+    color: black;
+    
+    padding:0;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    font-size: 2em;
+    margin:1%;
+    cursor: pointer;
+    width:169px;
+    height:56.3px;
+    position:relative;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.picked_profile{
+display:none;
+}
+
+#share {
+    background-color: rgba(255,255,255,0.0);
+    border:none;
+    color: black;
+    
+    padding:0;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    font-size: 2em;
+    margin:1%;
+    cursor: pointer;
+    width:165px;
+    height:56.3px;
+    position:relative;
+    cursor: pointer;
+    bottom:0;
+    justify-content: center;
+}
+
+#comment {
+    background-color: rgba(255,255,255,0.0);
+    border:;
+    color: black;
+    
+    padding:0;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    font-size: 2em;
+    margin:1%;
+    cursor: pointer;
+    width:164.8px;
+    height:56.3px;
+    position:relative;
+    cursor: pointer;
+    bottom:0;
+    border:none;
+    justify-content: center;
+}
+
+#add_pic {
+    background-color: #ffffff;
+    border:1px solid black;
+    color: black;
+    position:relative;
+    padding:0;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    font-size: 2em;
+    margin:1%;
+    cursor: pointer;
+    opacity:0.7;
+    width:98%;
+    height:36.3px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+#middle {
+margin:0;
+padding:0;
+display:;
+position:relative;
+top:;
+left:;
+right:;
+bottom:;
+background-color:#00FFFF;
+border:1px solid black;
+height:850px;
+width:100%;
+}
+/*The reactions are here*/
+#xxx{
+display:none;
+position:relative;
+top:0px;
+background-color:#060c41;
+justify-content:center;
+height:500px;
+width:100%;
+Z-index:2px;
+/*border:1px solid black;*/
+overflow:hidden;
+}
+
+.reactions {
+    background-color:#060c41;
+    border: none;
+    color: white;
+    padding:0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 3em;
+    margin:0;
+    cursor: pointer;
+    width:33%;
+    height:135px;
+    /*opacity:1;*/
+    overflow:hidden;
+    animation:animate 0.5s linear ;
+}
+
+@keyframes animate {
+0%,{
+box-shadow:0 0 0 rgba(0,0,0,.5);
+opacity:0;
+transform:translateX(0px) scale();
+}
+100%{
+box-shadow:0 40px 70px rgba(0,0,0,.8);
+opacity:1;
+transform:translateX(0px) scale();
+}
+/*100%{
+box-shadow:0 0 0 rgba(0,0,0,.5);
+opacity:0;
+transform:translateX(0px) scale();*/
+}
+}
+
+#change_profilePicture2{
+width:60px;
+height:60px;
+transform: translateY(-500px);
+}
+
+#button1 {
+animation-delay:0s;
+}
+
+#button2 {
+animation-delay:0.5s;
+}
+
+#button3 {
+animation-delay:1s;
+}
+
+#button4 {
+animation-delay:1.5s;
+}
+
+#button5{
+animation-delay:2s;
+}
+
+#button6{
+animation-delay:2.5s;
+}
+
+#span1 {
+display:inline-block;
+position:relative;
+top:110.5px;
+left:3px;
+height:269px;
+width:100%;
+border:none;
+justify-content:center;
+align-items:center;
+/*overflow:hidden;*/
+background-color:#060c21;
+/*z-index:;*/
+}
+
+#result {
+width:100%;
+height:100%;
+}
+
+#editor {
+display:none;
+}
+
+</style>
+</head>
+<body>
+
+<section id="introduction">
+<span id="profile_pic_div">
+
+<img src="" alt="No file Choosen" id="result" />
+
+</span>
+<div id="profile">
+
+<button class="profile" id="share" onclick="report()">report</button>
+
+<button class="profile" id="like" onclick="reaction_box()">React</button>
+
+<button class="picked_profile" id="haha" onclick="remove_reaction()">&#128514;</button>
+
+<button class="picked_profile" id="like1" onclick="remove_reaction()">&#128077;</button>
+
+<button class="picked_profile" id="dont_like" onclick="remove_reaction()">&#128078;</button>
+
+<button class="picked_profile" id="sad" onclick="remove_reaction()">&#128557;</button>
+
+<button class="picked_profile" id="love" onclick="remove_reaction()">&#10084;</button>
+
+<button class="picked_profile" id="wow" onclick="remove_reaction()">&#128562;</button>
+
+<button class="profile" id="comment" onclick="comment()">comment</button>
+
+</div>
+
+
+<div id="names">
+<h1 class="name" id="name">Name...</h1>
+<h1 class="name" id="surname">surname...</h1>
+<h2 class="name" id="bio">about Sandile</h2>
+</div>
+
+<button src="edit_profile.html" id="add_pic" onclick="edit()">Edit profile</button>
+
+<button id="change_profilePicture2" onclick('open_edit()')>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg id="i-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"  fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="50px" height="50px">
+    <path d="M4 8 L28 8 M4 16 L28 16 M4 24 L28 24" />
+</svg>
+</button>
+
+</section>
+
+<div id="editor">
+
+
+<input accept="image/*" type="file" id="demo" onchange="readFile();" /><br>
+
+<div class="btn-container">
+
+<button id="change_profilePicture" onclick="chooseFile()">Choose Photo</button>
+
+<button style="visibility:hidden; width: 60px;"></button>
+
+<a id="link" href="" download style="text-decoration: none;">
+
+<button onclick="save()">Save Photo</button>
+</a>
+</div>
+
+
+
+</div>
+
+<section id="xxx">
+
+<span id="span1">
+
+<button class="reactions" id="button1" onclick="haha()">&#128514;<br>Haha</button>
+
+<button class="reactions" id="button2" onclick="like()">&#128077;<br>Like</button>
+
+<button class="reactions" id="button3" onclick="dont_like()">&#128078;<br>Don't like</button>
+
+<button class="reactions" id="button4" onclick="sad()">&#128557;<br>Sad</button>
+
+<button class="reactions" id="button5" onclick="love()">&#10084;<br>Love</button>
+
+<button class="reactions" id="button6" onclick="wow()">&#128562;<br>Wow</button>
+
+</span>
+
+<script type="text/JavaScript">
+
+function open_edit(){
+document.getElementById("introduction").style.display="none";
+
+document.getElementById("middle").style.display="none";
+
+document.getElementById("editor").style.display="block";
+
+}
+
+//this code is executed when you click comment
+function comment() {
+
+}
+
+//this code is executed when reporting
+function report() {
+
+}
+
+//this code is extlecuted when you press an edit profile button
+function edit() {
+//document.getElementById("introduction").style.display="none";
+
+//document.getElementById("middle").style.display="none";
+
+document.getElementById("edit1").style.display="block";
+}
+
+//this code shows the reaction box
+function reaction_box() {
+document.getElementById("introduction").style.display="none";
+
+document.getElementById("middle").style.display="none";
+
+
+document.getElementById("xxx").style.display = "block";
+}
+
+//this code is executed when you react
+
+//haha
+function haha() {
+document.getElementById("xxx").style.display="none";
+
+document.getElementById("introduction").style.display="block";
+
+document.getElementById("middle").style.display="block";
+
+document.getElementById("like").style.display="none";
+
+document.getElementById("haha").style.display="block";
+}
+
+//like
+function like() {
+document.getElementById("xxx").style.display="none";
+
+document.getElementById("introduction").style.display="block";
+
+document.getElementById("middle").style.display="block";
+
+document.getElementById("like").style.display="none";
+
+document.getElementById("like1").style.display="block";
+}
+
+//don't like
+function dont_like() {
+document.getElementById("xxx").style.display="none";
+
+document.getElementById("introduction").style.display="block";
+
+document.getElementById("middle").style.display="block";
+
+document.getElementById("like").style.display="none";
+
+document.getElementById("dont_like").style.display="block";
+}
+
+//sad
+function sad() {
+document.getElementById("xxx").style.display="none";
+
+document.getElementById("introduction").style.display="block";
+
+document.getElementById("middle").style.display="block";
+
+document.getElementById("like").style.display="none";
+
+document.getElementById("sad").style.display="block";
+}
+
+//wow
+function wow() {
+document.getElementById("xxx").style.display="none";
+
+document.getElementById("introduction").style.display="block";
+
+document.getElementById("middle").style.display="block";
+
+document.getElementById("like").style.display="none";
+
+document.getElementById("wow").style.display="block";
+
+}
+
+//love
+function love() {
+document.getElementById("xxx").style.display="none";
+
+document.getElementById("introduction").style.display="block";
+
+document.getElementById("middle").style.display="block";
+
+document.getElementById("like").style.display="none";
+
+document.getElementById("love").style.display="block";
+
+}
+
+function remove_reaction() {
+document.getElementById("like1").style.display="none";
+
+document.getElementById("haha").style.display="none";
+
+document.getElementById("wow").style.display="none";
+
+document.getElementById("dont_like").style.display="none";
+
+document.getElementById("love").style.display="none";
+
+document.getElementById("sad").style.display="none";
+
+document.getElementById("like").style.display="block";
+
+}
+</script>
+<script>
+save = function() {
+navigator.vibrate([100,10,100]);
+var src = document.getElementById('result').src;
+document.getElementById('link').href = src;
+}
+function readFile() {
+var reader = new FileReader();
+var file = document.getElementById('demo').files[0]; 
+reader.onload = function(e) {
+document.getElementById('result').src = e.target.result;
+} 
+reader.readAsDataURL(file);
+}
+chooseFile = function() {
+navigator.vibrate([100,10,100]);
+document.getElementById('demo').click();
+}
+</script>
+</body>
+</html>

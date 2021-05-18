@@ -1,0 +1,27 @@
+/* WARNING: copyright 2021. Any distribution, editing or unauthorised use is strictly prohibited */
+.card{
+  display:inline-block;
+  height:470px;
+  max-width:405px;
+  min-width:390px;
+  margin:20px;
+  padding:0;
+  border-radius: 15px;
+}
+
+script {
+  display:none;
+}
+
+.pic {
+  width:405px;
+  height:235px;
+  padding:0;
+}
+
+.content {
+  width:360px;
+  height:215px;
+  padding:10px;
+  margin:0;
+}

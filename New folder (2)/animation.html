@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create New Account</title>
+
+<style type="text/css">
+
+html{
+scroll-behavior: smooth;
+}
+
+body {
+margin:0;
+padding:0;
+background-size: cover;
+height:auto;
+background-color:#aaa;
+display: flex;
+align-items: center;
+justify-content:;
+font-family: 'Ubuntu', sans-serif;
+flex-direction: column;
+}
+
+body::-webkit-scrollbar {
+  width:12px;
+  background:#565656;
+}
+
+body::-webkit-scrollbar-thumb {
+  width:12px;
+  background:#f00;
+}
+
+script {
+  display:none;
+}
+
+.container {
+border-radius:4px;
+padding-top:30px;
+width:300px;
+height:50px;
+background-color:#fff;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+.main {
+border-radius:4px;
+width:300px;
+height:;
+background-color:#fff;
+box-shadow:0px 0px 20px rgba(0,0,0,0.4);
+position: relative;
+transform: translateY(60px);
+}
+.container .input input {
+width:250px;
+height:auto;
+outline: none;
+border:none;
+border-bottom:1.5px solid rgba(0,0,0,0.2);
+font-size:15px;
+font-family: 'Ubuntu', sans-serif;
+padding-bottom: 7px;
+transition: all 0.3s ease;
+
+}
+.container label {
+position: absolute;
+left:25px;
+bottom:20px;
+color: grey;
+pointer-events: none;
+transition: all 0.3s ease;
+font-size:15px;
+}
+.container .input input:focus ~ label,
+.container .input input:valid ~ label {
+transform: translateY(-20px);
+color: #6200ff;
+font-size:12px;
+}
+.container .input input:focus,
+.container .input input:valid {
+border-bottom:1.5px solid #6200ff;
+}
+
+.button {
+width:;
+height:;
+font-family: 'Ubuntu', sans-serif;
+background:linear-gradient(-135deg, #6200ff, #8800c7);
+color:#fff;
+border:none;
+margin:0;
+padding:10px;
+border-radius:2px;
+text-decoration: none;
+}
+
+.btn1 {
+position: absolute;
+right:25px;
+bottom:20px;
+}
+
+#the_next_page {
+display: none;
+}
+
+.alert {
+color:#ff0000;
+}
+
+#submit {
+  display: none;
+}
+
+.container .input .gender {
+  width:250px;
+  height:auto;
+  outline: none;
+  border:none;
+  border-bottom:1.5px solid rgba(0,0,0,0.2);
+  font-size:15px;
+  font-family: 'Ubuntu', sans-serif;
+  padding-bottom: 7px;
+  transition: all 0.3s ease;
+}
+
+.drg{
+  transform: translateY(-25px);
+}
+
+.container .input .drg.active {
+transform: translateY(-25px);
+color: #6200ff;
+font-size:15px;
+}
+
+.container .input .gender.active {
+border-bottom:1.5px solid #6200ff;
+}
+
+</style>
+</head>
+<body>
+
+<form action="" method="POST" name="login">
+<div id="main" class="main">
+
+<div class="container">
+<div class="input">
+<input name="name" type="text" required>
+<label>Full Name and Surname</label>
+</div>
+</div>
+
+<div class="container">
+<div class="input">
+<input name="email" type="text" autocomplete="email" required>
+<label>E-mail or phone number</label>
+</div>
+</div>
+
+<div class="container">
+<div class="input">
+<input name="date_of_birth" type="date" required>
+<label>Date of birth</label>
+</div>
+</div>
+
+<div class="container">
+<div class="input">
+
+<select name="Gender" type="text" class='gender' required>
+  <option value="2">Male</option>
+  <option value="3">Female</option>
+  <option value="4">Ruther not say</option>
+</select>
+<label class='drg' id='sele'>Gender</label>
+</div>
+</div>
+
+<p class="alert" id="feedback"></p>
+<div class="container">
+<div class="input">
+<input name="password" type="password" id="password" oninput="abnoy()" required>
+<label>Password</label>
+</div>
+</div>
+
+<p class="alert" id="massage"></p>
+<div class="container">
+<div class="input">
+<input type="password" id="password2" oninput="match()" required>
+<label>Confirm password</label>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="btn1">
+  <a href='dowww.html' id=""  class="button">Cancel</a>
+
+<a href='#' id="next" onclick="send()"
+class="button">Sign-up</a>
+
+</div>
+</div>
+<br /><br /><br /><br /><br /><br />
+<!-- - - - - - - - - - - - - the next page - - - - - - - - - -->
+
+<input type="submit" id="submit">
+</form>
+<script>
+
+function abnoy() {
+var sura=document.getElementById("password").value.length;
+var no="8";
+if(no>sura) {
+
+document.getElementById("feedback").innerHTML = "Your password must be 8 characters or more.";
+
+}else {
+
+document.getElementById("feedback").innerHTML = "";
+
+}
+
+}
+
+function match() {
+
+
+
+}
+
+function send() {
+
+window.navigator.vibrate([100, 10, 100]);
+
+
+
+var password1=document.getElementById("password").value;
+
+var password2=document.getElementById("password2").value;
+
+if(password1 == password2) {
+
+  var password1=document.getElementById("password").value.length;
+
+if(password1 > 6){
+
+document.getElementById("massage").innerHTML =  "";
+
+if(confirm('By signing up you agree to our Terms, Conditions, privacy policy, and the way we collect and use your data.') == true){
+document.getElementById("submit").click();
+}
+
+}else {
+  alert("Your password must be more than 8 digits");
+}
+
+}else {
+
+alert("The password you've written doesn't match your confirmation password.");
+
+}
+
+//document.getElementById('the_next_page').style.display = 'block';
+
+//document.getElementById('main').style.display = 'none';
+
+}
+
+
+const navigation = document.querySelector('.drg');
+
+
+  document.querySelector('.gender').onclick = function(){
+    this.classList.toggle('active');
+    navigation.classList.toggle('active');
+
+  }
+
+</script>
+</body>
+</html>

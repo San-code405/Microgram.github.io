@@ -1,0 +1,89 @@
+<!DOCTYLE html>
+<html>
+<head>
+<meta chartset="UTF-8">
+
+<meta name="viewport" content="width=devic­e-width, initial-scale=1">
+
+<title>Sarah</title>
+<style>
+#file {
+display:none;
+}
+
+img {
+height:200px;
+}
+
+* {
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+h1 {
+font-family:sans-serif;
+font-size:30px;
+text-align:center;
+color:#222;
+}
+
+.profile_pic_div {
+height:200px;
+width:200px;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50px,-50px);
+}
+
+#photo {
+height:100%;
+width:100%;
+}
+
+#file {
+
+}
+
+
+</style>
+
+</head>
+<body>
+<div class="profile_pic_div">
+
+<img src="" id="photo">
+<input type="file" id="file">
+<label for="file" id="uploadBtn">chose a profile picture</label>
+
+</div>
+<script>
+const imgDiv = document.querySelector(".profile_pic_div");
+
+const img = document.querySelector("#photo");
+
+const file = document.querySelector("#file");
+
+const uploadBtn = document.querySelector("#uploadBtn");
+
+file.addEvenListener('change',function(){
+  const choosedFile = this.files[0];
+
+    if(choosedFile) {
+    const reader = new FileReader();
+  
+    reader.AddEventListener('load', funcrion(){
+      img.setAttribute('src', reader.result);
+    });
+    
+    reader.readAsDataURL(choosedFile);
+    
+  
+    }
+    
+});
+    
+</script>
+</body>
+</html>

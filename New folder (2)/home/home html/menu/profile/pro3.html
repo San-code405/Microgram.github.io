@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<!-- WARNING: copyright 2021. Any distribution, editing or unauthorised use is strictly prohibited -->
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+<title>Profie</title>
+<style>
+
+* {
+  outline:none;
+  text-decoration:none;
+  word-break:keep-all;
+  word-wrap:break-word;
+}
+
+html{
+  width:100%;
+  height:100%;
+  scroll-behavior: smooth;
+}
+
+script {
+  display:none;
+}
+
+body {
+border:none;
+background:cover;
+margin:0;
+padding:0;
+width:100%;
+height:100%;
+align-items: center;
+overflow:hidden;
+jistify-content: center;
+}
+
+#main::-webkit-scrollbar {
+  width:12px;
+  background:#565656;
+}
+
+#main::-webkit-scrollbar-thumb {
+  width:12px;
+  background:#f00;
+}
+
+#main{
+
+width: calc(100% - 20px);
+height:calc(100% - 55px);
+padding:5px 10px;
+margin:0px;
+border:none;
+overflow:auto;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(5px);
+}
+
+.main{
+
+width: 100%;
+
+}
+
+#names {
+align-items:center;
+display:;
+float:right;
+position:relative;
+margin:0;
+font-size:large;
+height:500px;
+width:48%;
+right:0px;
+top:0px;
+padding:;
+text-align:center;
+margin: 0;
+padding: 0;
+}
+
+.name {
+
+}
+
+#span, #profile_pic_div {
+background-color:none ;
+position:relative;
+display:flex;
+border:1px solid #000000;
+box-sizing: border-box;
+top:0;
+left:0;
+width:500px;
+height:470px;
+z-index:0;
+float:left;
+margin:0;
+padding:0;
+justify-content: center;
+}
+
+#profContainer{
+
+  box-shadow: 0 14px 28px rgba(0,0,0,0.32),
+0 10px 14px rgba(0,0,0,0.29);
+  width:500px;
+  height:538.3px;
+  border:1px solid black;
+  margin:opx;
+  padding:0px;
+
+}
+
+.span, .span2 {
+
+display: block;
+top:0;
+width:100%;
+border:1px solid rgba(255, 255, 0, 0);
+box-sizing: border-box;
+margin:none;
+
+}
+
+.span {
+
+height:68px;
+width: 180px;
+display:flex;
+
+}
+
+.span2{
+
+height: auto;
+max-width: 580px;
+display:flex;
+}
+
+#profile_pic_div {
+overflow: hidden;
+
+}
+
+#profile {
+background-color:white;
+float:left;
+margin:0;
+position:relative;
+display:flex;
+left:0;
+bottom:;
+align-items:left;
+border:1px solid black;
+height:66px;
+justify-content: center;
+}
+
+#like{
+    background-color: rgba(255,255,255,0.0);
+    border:none;
+    color: black;
+
+    padding:0;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    font-size: 2em;
+    margin:1%;
+    cursor: pointer;
+    width:168px;
+    height:56.3px;
+    position:relative;
+    cursor: pointer;
+    justify-content: center;
+}
+
+#like:hover {
+
+background-color: rgba(0,255,255,0.6);
+transform:translateY(-2%);
+
+}
+
+#share {
+    background-color: rgba(255,255,255,0.0);
+    border:none;
+    color: black;
+
+    padding:0;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    font-size: 2em;
+    margin:1%;
+    cursor: pointer;
+    width:165px;
+    height:56.3px;
+    position:relative;
+    cursor: pointer;
+    bottom:0;
+    justify-content: center;
+}
+
+#share:hover {
+
+background-color: rgba(0,255,255,0.6);
+transform:translateY(-2%);
+
+}
+
+#comment {
+    background-color: rgba(255,255,255,0.0);
+    border:;
+    color: black;
+
+    padding:0;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    font-size: 2em;
+    margin:1%;
+    cursor: pointer;
+    width:164.8px;
+    height:56.3px;
+    position:relative;
+    cursor: pointer;
+    bottom:0;
+    border:none;
+    justify-content: center;
+}
+
+#comment:hover {
+
+background-color: rgba(0,255,255,0.6);
+transform:translateY(-2%);
+
+}
+
+
+
+#middle {
+margin:0;
+padding:0;
+display:none;
+position:relative;
+top:;
+left:;
+right:;
+bottom:;
+background-color:rgba(0,0,0,0.0);
+backdrop-filter:blur(5px);
+border:none;
+max-height:1450px;
+box-shadow: 0 0 7px #000;
+width: calc(100% - 0px);
+margin:10px 0px;
+overflow: hidden;
+}
+
+/*The reactions are here*/
+#xxx{
+display:none;
+position:relative;
+top:0px;
+background-color:#060c41;
+justify-content:center;
+height:500px;
+width:100%;
+Z-index:2px;
+overflow:hidden;
+}
+
+.reactions {
+    background-color:#060c41;
+    border: none;
+    color: white;
+    padding:0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 3em;
+    margin:0;
+    cursor: pointer;
+    width:33%;
+    height:135px;
+    overflow:hidden;
+    animation:animate 0.5s linear ;
+}
+
+@keyframes animate {
+0%,{
+box-shadow:0 0 0 rgba(0,0,0,.5);
+opacity:0;
+transform:translateX(0px) scale();
+}
+100%{
+box-shadow:0 40px 70px rgba(0,0,0,.8);
+opacity:1;
+transform:translateX(0px) scale();
+}
+
+}
+
+#button1 {
+animation-delay:0s;
+}
+
+#button2 {
+animation-delay:0.5s;
+}
+
+#button3 {
+animation-delay:1s;
+}
+
+#button4 {
+animation-delay:1.5s;
+}
+
+#button5{
+animation-delay:2s;
+}
+
+#button6{
+animation-delay:2.5s;
+}
+
+#span1 {
+display:inline-block;
+position:relative;
+top:110.5px;
+left:3px;
+height:269px;
+width:100%;
+border:none;
+justify-content:center;
+align-items:center;
+background-color:#060c21;
+}
+
+
+
+#result {
+margin:0px;
+padding:0px;
+height:100%;
+width:497px;
+boder:0px;
+}
+
+#demo{
+display:none;
+}
+
+/*#change_profilePicture, #save_pp, .edit_ {
+padding: 12px;
+border: 1px solid #000000;
+color: black;
+cursor: pointer;
+width: 700px;
+border-radius: 50px;
+font-size:2em;
+juatify-content:center;
+}*/
+
+.input1, .input2 {
+border-radius: 2px;
+text-align: left;
+font-size: 10px;
+padding: 11px solid black;
+margin: 11px;
+width: 950px;
+background:rgba(250,250,250,0.0);
+height: 50px;
+font-size:40px;
+border-left:0px;
+border-right:0px;
+border-top:0px;
+border-bottom:4px solid black;
+}
+
+#biography {
+height:200px;
+font-size:40px;
+}
+
+.loader {
+display: none;
+position:relative;
+border: 16px solid #f3f3f3;
+border-radius: 50%;
+border-top: 16px solid #48d1cc;
+width: 120px;
+height: 120px;
+top: 600px;
+-webkit-animation: spin 2s linear infinite;
+animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+0% {-webkit-transform: rotate(0deg);}
+100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+#introduction {
+
+display: block;
+
+}
+
+#introduction h1 , #introduction h2{
+
+float:left;
+right: 0px;
+width: 400px;
+
+}
+
+.line {
+
+width:100%;
+opacity: 0;
+
+}
+
+.mama{
+  display: flex;
+  max-width: 500px;
+}
+
+#allpic {
+display:none ;
+}
+
+#pp {
+align-items: center;
+}
+
+#ppic {
+display:none;
+}
+
+#backb, #save_pp {
+height:120px;
+}
+
+#backb {
+font-size:2em;
+juatify-content:center;
+padding: 12px;
+border: 1px solid #000000;
+color: black;
+cursor: pointer;
+width: 270px;
+border-radius: 50px;
+}
+
+#about {
+
+font-size:20px;
+
+}
+
+#bio {
+ overflow-x:;
+}
+
+#bio1 {
+height:inherit;
+}
+
+.likkes {
+
+font-size:20px;
+float:right;
+
+}
+
+.none {
+
+display:none;
+
+}
+
+#unfollow, #follow, #add_pic{
+position:relative;
+margin:20px 0 0;
+padding:10px 20px;
+text-decoration: none;
+border:1px solid #000;
+color:#000;
+width:calc(100% - 40px);
+background:transparent;
+font-family: calibri;
+font-size: 1.2rem;
+cursor: pointer;
+text-align: center;
+
+}
+
+#unfollow:hover, #follow:hover, #add_pic:hover{
+border:1px solid #fff;
+color:#fff;
+background-color:#000;
+}
+
+#unfollow {
+  display:none;
+}
+
+.fff {
+font-size:40px;
+float:left;
+right: 0px;
+width: 400px;
+}
+
+.kes {
+font-size:20px;
+}
+
+#lik {
+display:none;
+}
+
+header {
+  height:55px;
+  overflow:hidden;
+}
+
+header .title h1 {
+  margin:0;
+  padding:0;
+  font-family:calibri;
+  font-size:3rem;
+  font-weight:30;
+  color:#fff;
+}
+
+header .title {
+  height:55px;
+  display:flex;
+  background-color: #000;
+}
+
+header .title .clock {
+  display:flex;
+  margin-left: auto;
+}
+
+header .title .clock h4 {
+ margin:0;
+ padding:0;
+ font-family:calibri;
+ font-size:2.5rem;
+ font-weight:20;
+ color:#fff;
+}
+
+header .title .back {
+ margin-top:7px;
+ margin-right:10px;
+ margin-bottom:7px;
+ margin-left:7px;
+ padding:9px;
+ border-radius: 50%;
+ width:20px;
+ height:20px;
+ overflow:hidden;
+ border:1px solid #fff;
+ background-color:rgba(255,255,255,0.1);
+}
+
+header .title .back svg {
+ width:28px;
+ height:28px;
+}
+
+header.title .back:hover {
+ background-color:rgba(255,255,255,0.4);
+}
+
+#ppic a, .aaa {
+
+    position:relative;
+    margin:20px 5px;
+    padding:10px 20px;
+    text-decoration: none;
+    border:1px solid #000;
+    display:inline-block;
+    color:#000;
+    background:transparent;
+    font-family: calibri;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#ppic a:hover, .aaa:hover {
+    color:#fff;
+    background:#000;
+}
+
+.table {
+  width:100%;
+}
+
+table {
+  width:100%;
+}
+
+@media (max-width:500px){
+
+  strong, p, h1, h2, h3, b, body, pre, a, th, td, div, span, input, textarea, tr, button, center{
+    font-size:2rem;
+  }
+
+  container textarea {
+    font-size:40px;
+  }
+
+   a,  input {
+    font-size:2rem;
+  }
+
+  * {
+    font-size:40px;
+  }
+
+  i {
+    font-size:1.6rem;
+  }
+
+  header {
+    display:none;
+  }
+
+}
+
+</style>
+</head>
+<body>
+
+  <header>
+  <div class="title">
+    <a onclick='history.back()'  class='back' ><svg width="55px" height="55px" xmlns="http://www.w3.org/2000/svg" fill-rule="none" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" clip-rule="none"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z" style='stroke:#fff;'/></svg></a>
+    <h1>Profie</h1>
+    <span class="clock">
+      <h4 class="clock-time"></h4>
+    </span>
+  </div>
+  </header>
+
+<div id="main">
+<div id="introduction">
+
+  <div id="profContainer">
+<div id="profile_pic_div" style='background-image:url(download.png);background-size:cover;'>
+
+<a onclick="showallpc()">
+<img src="" alt="" id="result" />
+</a>
+
+</div>
+
+<section id="profile">
+<p id='lik'></p>
+<button class="profile" id="like" onclick="reaction_box()">
+
+<?xml version="1.0" encoding="iso-8859-1"?><!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;fill:ffffff;" xml:space="preserve" height="40px" width="inherit" ><g fill="none" id='sma'>	<g stroke="#000000" stroke-width="40">		<path d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268			c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514		 c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482			s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514			C512,93.417,453.532,30,376,30z" style="fill:ffffff;"/>	</g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+
+<b class="likkes"><i id='likes'>0</i><br>Likes</b>
+
+</button>
+
+<button class="profile" id="comment" style='display:block;' onclick="comment()">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.25 32" width="50px" height='40px'><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title>Comments</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2" stroke-width="40"><rect class="cls-1" x="1" y="1" width="45.25" height="30" rx="1"/><path class="cls-1" d="M46.25,2l-22,17.78a1,1,0,0,1-1.29,0L1,2"/><line class="cls-1" x1="45.5" y1="31" x2="28.95" y2="16"/><line class="cls-1" x1="2" y1="31" x2="18" y2="16.5"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg> <b class="likkes"><i id='com'>0</i></b>
+</button>
+
+<p class='none' id='coco'></p>
+
+<a href="file:///C:/Users/nelson%20khoza/Desktop/New%20folder%20(2)/home/home%20html/help/report.html"><button class="profile" id="share" onclick="report()">report</button></a>
+
+</section>
+
+
+</div>
+
+<center><div id="llooddeerr" class="loader"></div></center>
+
+<div class="table">
+  <table>
+    <tr>
+      <td><h1>Name: </h1></td>
+      <td><h1 class="name" id="name">Name...</h1></td>
+    </tr>
+    <tr>
+      <td><h1>Surname: </h1></td>
+      <td><h1 class="name" id="surname">Surname...</h1></td>
+    </tr>
+    <tr>
+      <td><h1>About: </h1></td>
+      <td><h1 style='display:flex' class="name" id="bio">please write a short discription about yourself</h1></td>
+    </tr>
+    <tr>
+      <td><h1>followers: </h1></td>
+      <td><h2 style='display:flex' class="name" id="fff">0</h2></td>
+    </tr>
+  </table>
+</div>
+
+
+
+<!--div class="line"></div-->
+</div>
+<a class='aaa' id='follow' onclick="follow()">Follow</a>
+<a class='aaa' id='unfollow' onclick="unfollow()">Unfollow</a>
+<a class='aaa' id="add_pic" onclick="edit()">Edit profile</a>
+<div id="ppic">
+
+<img src="images.jpeg" alt="" id="pp" />
+<br>
+<a id="link" download style="text-decoration: none;" onclick="save()">Save Photo</a>
+
+<a onclick="backend()">Back</a>
+
+</div>
+
+<section id="middle">
+<div id="editor">
+
+
+<input accept="image/*" type="file" id="demo" onchange="readFile();" /><br>
+
+<div class="btn-container">
+
+<center>
+
+<a class='aaa' id="change_profilePicture" class="change_pp"  onclick="chooseFile()">Change profile picture</a>
+
+<!--<button style="visibility:hidden; width: 60px;"></button>-->
+<br />
+
+</center>
+</div>
+
+<h1 style="font-size:3em;">Name</h1>
+
+<input type="text" id='name1' class="input1" placeholder="Please write your name" >
+
+<h1 style="font-size:3em;">Surname</h1>
+<input type="text" id='surname1' class="input1" placeholder="Please write your name" >
+
+<h1 style="font-size:3em;">Bio</h1>
+<textarea type="text" class="input2" id='bio1' placeholder="Please write something about yourself" ></textarea>
+
+<br />
+<br />
+<center><a class='aaa' onclick="goBack()" class="edit_">Done</a><a class='aaa' onclick="Back1()" class="edit_">Back</a></center>
+<br>
+</div>
+
+</section>
+
+</div>
+<script type="text/JavaScript">
+
+
+function set_name() {
+var name = document.getElementById('name1');
+
+if(name.value == ''){
+}else {
+
+  if(document.getElementById('name1').value.length >= 100){
+
+alert('your name is too long');
+
+  }else {
+
+if(name.value.length <= 2 ){
+
+  alert('your name is too short');
+
+}else{
+  var name = document.getElementById('name1').value;
+  var wrong = name.replace(/\W/g, '');
+  document.getElementById('name').innerHTML = wrong;
+  document.getElementById('name1').value = '';
+  document.getElementById('middle').style.display = 'none';
+}
+}
+}
+}
+
+function set_bio() {
+var bio = document.getElementById('bio1');
+
+if(bio.value.length >= 350){
+
+  alert('your bio must be less than 250 charrectors');
+
+}else {
+
+document.getElementById('bio').innerHTML = bio.value;
+document.getElementById('middle').style.display = 'none';
+document.getElementById('bio1').value = '';
+
+}
+
+}
+
+function set_username() {
+var surname = document.getElementById('surname1');
+if(surname.value == ''){
+
+}else {
+if(surname.value.length >= 50){
+  alert('your surname is too long')
+}else{
+  var surname = document.getElementById('surname1').value;
+  var wrong = surname.replace(/\W/g, '');
+document.getElementById('surname').innerHTML = wrong;
+document.getElementById('surname1').value = '';
+document.getElementById('middle').style.display = 'none';
+}
+}
+}
+
+//this code is executed when you click comment
+function comment() {
+
+}
+
+function backend() {
+document.getElementById("introduction").style.display="block";
+
+document.getElementById("middle").style.display="none";
+
+document.getElementById('ppic').style.display = 'none';
+}
+
+//this code is executed when reporting
+function report() {
+
+}
+
+//this code is extlecuted when you press an edit profile button
+function edit() {
+//document.getElementById("introduction").style.display="none";
+
+//document.getElementById("middle").style.display="none";
+
+document.getElementById("middle").style.display="block";
+}
+
+function goBack() {
+
+set_name()
+
+set_username()
+
+set_bio()
+
+}
+
+function Back1() {
+  document.getElementById('middle').style.display = 'none';
+  document.getElementById('bio1').value = '';
+  document.getElementById('name1').value = '';
+  document.getElementById('surname1').value = '';
+}
+
+function unfollow() {
+
+var fol = document.getElementById('fff').innerHTML+= "-1";
+document.getElementById('fff').innerHTML = eval(fol);
+document.getElementById("follow").style.display = 'block';
+document.getElementById("unfollow").style.display = 'none';
+
+}
+
+function follow() {
+
+var fol = document.getElementById('fff').innerHTML+= "+1";
+document.getElementById('fff').innerHTML = eval(fol);
+document.getElementById("follow").style.display = 'none';
+document.getElementById("unfollow").style.display = 'block';
+
+}
+
+//this code shows the reaction box
+
+function reaction_box() {
+
+if(document.getElementById('lik').innerHTML == ''){
+
+document.getElementById("sma").style.fill = '#ff0000';
+document.getElementById('lik').innerHTML = 'liked';
+
+var fol = document.getElementById('likes').innerHTML+= "+1";
+document.getElementById('likes').innerHTML = eval(fol);
+
+}else {
+
+document.getElementById("sma").style.fill = 'none';
+document.getElementById('lik').innerHTML = '';
+
+var fol = document.getElementById('likes').innerHTML+= "-1";
+document.getElementById('likes').innerHTML = eval(fol);
+
+}
+
+
+}
+
+
+
+save = function() {
+document.getElementById("llooddeerr").style.display="block";
+
+navigator.vibrate([100,10,100]);
+var src = document.getElementById('result').src;
+document.getElementById('link').href = src;
+
+document.getElementById("llooddeerr").style.display="none";
+}
+
+function readFile() {
+document.getElementById("llooddeerr").style.display="block";
+
+var reader = new FileReader();
+var file = document.getElementById('demo').files[0];
+reader.onload = function(e) {
+document.getElementById('result').src = e.target.result;
+
+document.getElementById('pp').src = e.target.result;
+
+document.getElementById("llooddeerr").style.display="none";
+}
+
+reader.readAsDataURL(file);
+
+}
+
+chooseFile = function() {
+document.getElementById("llooddeerr").style.display="block";
+
+window.navigator.vibrate([100,10,100]);
+document.getElementById('demo').click();
+
+document.getElementById("llooddeerr").style.display="none";
+}
+
+function showallpc() {
+document.getElementById("introduction").style.display="none";
+
+document.getElementById("middle").style.display="none";
+
+document.getElementById('ppic').style.display = 'block';
+
+}
+
+</script>
+ <script src='C:\Users\nelson khoza\Desktop\New folder (2)\home\all.js'></script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<!-- WARNING: copyright 2021. Any distribution, editing or unauthorised use is strictly prohibited -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="settings.css" rel="stylesheet" media="only screen and
+  (max-device-width:8880px)">
+  <link href="settings1.css" rel="stylesheet" media="only screen and
+  (max-device-width:880px)">
+  <style>
+
+  html {
+    width:100%;
+    height:100%;
+  }
+
+   body{
+     width:100%;
+     height:100%;
+     margin:0;
+     padding:0;
+     overflow:hidden;
+   }
+
+   .main::-webkit-scrollbar {
+     width:12px;
+     background:#565656;
+   }
+
+   .main::-webkit-scrollbar-thumb {
+     width:12px;
+     background:#f00;
+   }
+
+   .main {
+      height:calc(100% - 50px);
+      width:100%;
+      top:0;
+      left:0;
+      margin:0;
+      padding:0;
+      overflow:auto;
+   }
+
+   .main .container {
+     width:calc();
+   }
+
+  /* .main .container a {
+   decoration:none;
+   transition:0.5s;
+   position:relative;
+   margin:20px 10px 0;
+   padding:10px 20px;
+   text-decoration: none;
+   border:1px solid #fff;
+   display:inline-block;
+   color:#000;
+   width:;
+   font-family: calibri;
+   font-size:2.2rem;
+   outline:none;
+   background:#fff;
+   }*/
+
+   .card {
+     transition:0.5s;
+     overflow:hidden;
+     box-shadow:0 0 6px #000;
+     border:1px solid #000;
+     background-color: rgba(255,255,255,0.05);
+     backdrop-filter:blur(5px);
+    }
+
+   .card:hover {
+     transform:translateY(-7px);
+   }
+
+  /*.main .container a:hover{
+   border:1px solid #fff;
+   background:#000;
+   color:#fff;
+  }*/
+
+  .pic {
+    width:calc(100% - 100px);
+    height:255px;
+    margin:5px 50px;
+    overflow:hidden;
+    background:none;
+    }
+
+    .pic img {
+      width:100%;
+      height:100%;
+      }
+
+  script {
+    display:none;
+  }
+
+  .invisible {
+    decoration:none;
+    position:relative;
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    display:inline-block;
+    width:;
+    font-family: calibri;
+    outline:none;
+    background:none;
+  }
+
+  .invisible:hover {
+    decoration:none;
+    position:relative;
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    display:inline-block;
+    width:;
+    font-family: calibri;
+    outline:none;
+    background:none;
+  }
+
+  .content {
+
+  }
+
+  .content h1 {
+    margin:0;
+    padding:0;
+    font-size:2.3rem;
+    font-weight:13;
+    color:#000;
+  }
+
+  .content p {
+    margin:5px 0;
+    padding:0;
+    font-size:1.7rem;
+    color:#000;
+  }
+
+  header {
+    height:50px;
+    overflow:hidden;
+  }
+
+  header .title h1 {
+      margin:0;
+      padding:0;
+      font-family:calibri;
+      font-size:3rem;
+      font-weight:30;
+      color:#fff;
+    }
+
+    header .title {
+      display:flex;
+      height: 50px;
+      background-color: #000;
+    }
+
+    header .title .clock {
+      display:flex;
+      margin-left: auto;
+    }
+
+   header .title .clock h4 {
+     margin:0;
+     padding:0;
+     font-family:calibri;
+     font-size:2.5rem;
+     font-weight:20;
+     color:#fff;
+   }
+
+   header .title .back {
+     margin-top:7px;
+     margin-right:10px;
+     margin-bottom:7px;
+     margin-left:7px;
+     padding:9px;
+     border-radius: 50%;
+     width:20px;
+     height:20px;
+     overflow:hidden;
+     cursor:pointer;
+     border:1px solid #fff;
+     background-color:rgba(255,255,255,0.1);
+   }
+
+   header .title .back svg {
+     width:28px;
+     height:28px;
+   }
+
+   header.title .back:hover {
+     background-color:rgba(255,255,255,0.4);
+   }
+
+   script {
+     display:none;
+   }
+
+   @media (min-width:580px) {
+     .card{
+       display:inline-block;
+       height:370px;
+       max-width:310px;
+       min-width:280px;
+       margin:10px;
+       padding:0;
+       border-radius: 5px;
+     }
+
+     .pic {
+       width:210px;
+       height:135px;
+       padding:0;
+     }
+
+     .content {
+       width:260px;
+       height:115px;
+       padding:10px;
+       margin:0;
+     }
+   }
+
+   @media (max-width:500px){
+
+     strong, p, h1, h2, h3, b, body, pre, a, th, td, div, span, input, textarea, tr, button, center{
+       font-size:2rem;
+     }
+
+     container textarea {
+       font-size:40px;
+     }
+
+      a,  input {
+       font-size:2rem;
+     }
+
+     * {
+       font-size:40px;
+     }
+
+     i {
+       font-size:1.6rem;
+     }
+
+     header {
+       display:none;
+     }
+
+   }
+
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <div class="title">
+      <a onclick='history.back()'  class='back' ><svg width="55px" height="55px" xmlns="http://www.w3.org/2000/svg" fill-rule="none" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" clip-rule="none"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z" style='stroke:#fff;'/></svg></a>
+      <h1>Settings</h1>
+      <span class="clock">
+        <h4 class="clock-time"></h4>
+      </span>
+    </div>
+  </header>
+
+  <div class="main">
+
+    <div class="title"></div>
+
+    <div class="container">
+
+      <div class="card">
+        <a href="" class="invisible" draggable="false">
+          <div class='pic'><img draggable="false" src="personal-information.png" alt=""></div>
+          <div class='content'>
+            <h1 draggable="false">Personal information</h1>
+            <p draggable="false">Username, passwords, Email, etc.</p>
+          </div>
+        </a>
+       </div>
+
+       <div class="card">
+         <a href="" class="invisible" draggable="false">
+           <div class='pic'><img draggable="false" src="padlock.png" alt=""></div>
+           <div class='content'>
+             <h1 draggable="false">Login and security</h1>
+             <p draggable="false">Passwords, etc.</p>
+           </div>
+         </a>
+       </div>
+
+       <div class="card">
+         <a href="personalise/personalise.html" class="invisible" draggable="false">
+           <div class='pic'><img draggable="false" src="affiliate-marketing.png" alt=""></div>
+           <div class='content'>
+             <h1 draggable="false">Personalise</h1>
+             <p draggable="false">font size, background colour, wallpaper, etc.</p>
+          </div>
+         </a>
+       </div>
+
+       <div class="card">
+         <a href="blockings/blockings.html" class="invisible" draggable="false">
+           <div class='pic'><img draggable="false" src="blocked.png" alt=""></div>
+           <div class='content'>
+             <h1 draggable="false">Blockings</h1>
+             <p draggable="false">Block people or view list of peolpe you blocked.</p>
+           </div>
+         </a>
+       </div>
+
+       <div class="card">
+         <a href="" class="invisible" draggable="false">
+           <div class='pic'><img draggable="false" src="cookie.png" alt=""></div>
+           <div class='content'>
+             <h1 draggable="false">Cookies</h1>
+             <p draggable="false">Manage Cookies.</p>
+           </div>
+         </a>
+       </div>
+
+       <div class="card">
+         <a href="" class="invisible" draggable="false">
+           <div class='pic'><img draggable="false" src="Payment-method.png" alt=""></div>
+           <div class='content'>
+             <h1 draggable="false">Payment method</h1>
+             <p draggable="false">Buy or pay for something on Microgram.</p>
+           </div>
+         </a>
+       </div>
+
+       <div class="card">
+         <a href="" class="invisible" draggable="false">
+           <div class='pic'><img draggable="false" src="online-advertising.png" alt=""></div>
+           <div class='content'>
+             <h1 draggable="false">Advertisements</h1>
+             <p draggable="false">Make an Advertisement, or see more Advertisements.</p>
+           </div>
+         </a>
+       </div>
+
+       <div class="card">
+         <a href="" class="invisible" draggable="false">
+           <div class='pic'><img draggable="false" src="question-mark.png" alt=""></div>
+           <div class='content'>
+             <h1 draggable="false">Can't use Microgram?</h1>
+             <p draggable="false">Find how to use Microgram.</p>
+           </div>
+         </a>
+       </div>
+
+       <div class="card">
+         <a href="file:///C:/Users/nelson%20khoza/Desktop/New%20folder%20(2)/home/home%20html/help/report.html" class="invisible" draggable="false">
+           <div class='pic'><img draggable="false" src="report.png" alt=""></div>
+           <div class='content'>
+             <h1 draggable="false">Report bug</h1>
+             <p draggable="false">Report a problem about Microgram.</p>
+           </div>
+         </a>
+       </div>
+
+    </div>
+
+  </div>
+  <script src='C:\Users\nelson khoza\Desktop\New folder (2)\home\all.js'></script>
+<!-- WARNING: copyright 2021. Any distribution, editing or unauthorised use is strictly prohibited -->
+</body>
+</html>

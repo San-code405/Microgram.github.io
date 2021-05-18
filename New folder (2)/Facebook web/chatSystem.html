@@ -1,0 +1,109 @@
+<!DOCTYLE html>
+<html>
+<head>
+<title></title>
+<script src="" type="text/javascript"></script>
+
+<script>
+
+<?php
+    $conn = mysql_connect("localhost", "root" ,"");
+    mysql_select_db(//'database_name',
+$conn);
+ 
+    $select = "SELECT * FROM logs ORDER BY id DESC";
+    
+    $rs=mysql_query($select);
+    
+    $count = mysql_num_rows($rs);
+    
+    if($count>0){
+      while($row = mysql_fetch_array($rs)){
+        echo $row['username'] . " : " $row['msg'] . <br>;
+      }
+    }
+
+
+?>
+
+</script>
+
+<script>
+<?php
+  &uname = $_REQUEST['uname'];
+  &msg = $_REQUEST['msg'];
+  
+  $conn = mysql_connect("localhost", "root" ,"");
+  mysql_select_db(/*'database_name'*/,$conn);
+  
+  $insert = "INSERT /*Tables name*/ SET
+    username = '$uname';
+    msg = '$msg';";
+    
+    mysql_query($insert);
+    
+    
+
+?>
+
+
+
+</script>
+
+<script>
+function submitChat(){
+ if( form1.uname.value == '' || form1.msg.value == ''){
+  alert("All fields are mandatory!");
+ }
+ 
+ form1.uname.readySate = true,
+ form1.uname.style.border = 'none';
+ 
+ $('#imageload').show();
+
+ var uname = encodeURLcomponent(form1.uname.value) ;
+ var msg = encodeURLcomponent(form1.msg.value) ;
+ var xmlhttp = new XMLHttpRequest() ;
+
+
+ xmlhttp.onreadystatechange = function(){
+  if(xmlhttp.readystate == 4 && xmlhttp.status == 2000){
+  document.getElementById("chatlogs").innerHTML = xmlhttp.responseText;
+  $('#imageload').hide();
+ }
+ 
+ xmlhttp.open('GET','insert.php?uname='+uname+'&msg='+msg,true);
+ xmlhttp.send();
+ 
+ $(document).ready(function(e) {
+    $ajaxSetup({cache:false});
+    setInterval(function(){$('#chatlogs').load('logs.php');},2000);
+ })
+}
+
+</script>
+<body>
+<div align="center">
+
+<form name="form1">
+
+Enter your name:<input type="text" name="uname"><br>
+
+Your message:<textarea name="msg"></textarea><br>
+
+<a href="#" onclick="submitChat()" >Send</a><br><br><br>
+
+<div id="imageload" style="display:none">
+<img src="" height="" width="">
+</div>
+
+
+<div id="chatlogs">
+Loading please wait...<br><img src="" height="" width="">
+</div>
+
+</form>
+</div>
+
+<body>
+</html>

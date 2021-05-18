@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+body {
+background-color:#00ffff;
+border:1px solid #000000;
+width:100%;
+height:auto;
+}
+
+p {
+font-size:2em;
+}
+
+input {
+font-size:2em;
+}
+
+.reporter {
+display:inline-block;
+font-size:5em;
+}
+
+#spam, #nudity, #violance, #fake_profile {
+display:inline-block;
+
+
+}
+
+#free, #submit_report {
+width:800px;
+height:100px;
+border:1px solid #000000;
+}
+
+#submit_report {
+color:#000000;
+background-color:#ffffff;
+opacity:0.8;
+font-size:5em;
+}
+</style>
+
+</head>
+<body>
+
+<form id="reporter">
+<input id="nudity" type="checkbox">Nudity</input>
+<br>
+<input id="spam" type="checkbox">Spam</input>
+<br>
+<input id="violance" type="checkbox">Violanve</input>
+<br>
+<input id="fake_profile" type="checkbox">Fake profile</input>
+
+<p id="">If it is something else please write it here.</p>
+<input id="free" type="text" name="report">
+<br>
+<br>
+<button class="" type="submit" id="submit_report" name="submit">Done</button>
+
+</form>
+
+</body>
+
+</html>

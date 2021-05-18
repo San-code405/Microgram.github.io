@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Friends</title>
+
+  <style>
+    * {
+      outline: none;
+    }
+
+    body {
+      width:100%;
+      min-height:100%;
+      margin:0;
+      padding:0;
+    }
+
+    body::-webkit-scrollbar {
+      width:12px;
+      background:#565656;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      width:12px;
+      background:#f00;
+    }
+
+    .main {
+      display:inline-block;
+      width:100%;
+      padding:0;
+      margin:0;
+      border:none;
+    }
+
+    .main .container {
+      display:inline-block;
+      width:100%;
+      padding:0;
+      margin:0;
+      border:none;
+    }
+
+    .main .container .prsn {
+      display:inline-block;
+      width:100%;
+      padding:0;
+      margin:0;
+    }
+
+    .main .container .prsn {
+      display:flex;
+      width:100%;
+      height:110px;
+      border-bottom:2px solid #000000;
+      border-top:none;
+      border-left:none;
+      border-right:none;
+      cursor:pointer;
+      text-align:left;
+    }
+
+    .main .container .prsn .pic {
+      background-image: url(download.png);
+      background-size: cover;
+      background-color:#fff;
+      display:inline-block;
+      width:80px;
+      height:80px;
+      padding:0px;
+      margin:15px;
+      border:2px solid #000000;
+      border-radius:50%;
+      cursor:pointer;
+      overflow:hidden;
+    }
+
+    .main .container .prsn .name .nam {
+      margin:40px;
+      padding:0;
+      text-decoration:none;
+      font-family: calibri;
+      font-size: 1.5rem;
+    }
+
+    .main .container p {
+       margin:0;
+       padding:0;
+       text-decoration:none;
+       font-family: calibri;
+       font-size: 1.5rem;
+    }
+
+    .main .container .prsn .pic img {
+      width:100%;
+      height:100%;
+      margin:0;
+    }
+
+    .main .container a {
+      color:#000000;
+      text-decoration:none;
+      font-family: calibri;
+      outline:none;
+      font-size: 1.5rem;
+    }
+
+    .main .container .addFriends {
+      position:relative;
+      margin:20px 0 0;
+      padding:10px 20px;
+      text-decoration: none;
+      border:1px solid #fff;
+      display:inline-block;
+      color:#fff;
+      background:#000;
+      font-family: calibri;
+      font-size: 1.2rem;
+    }
+
+    .main .container .addFriends:hover {
+      color:#000;
+      background:#fff;
+      border:1px solid #000;
+    }
+
+    header .title h1 {
+      margin:0;
+      padding:0;
+      font-family:calibri;
+      font-size:3rem;
+      font-weight:30;
+      color:#fff;
+    }
+
+    header .title {
+      display:flex;
+      background-color: #000;
+    }
+
+    header .title .clock {
+      display:flex;
+      margin-left: auto;
+    }
+
+   header .title .clock h4 {
+     margin:0;
+     padding:0;
+     font-family:calibri;
+     font-size:2.5rem;
+     font-weight:20;
+     color:#fff;
+   }
+
+   header .title .back {
+     margin-top:7px;
+     margin-right:10px;
+     margin-bottom:7px;
+     margin-left:7px;
+     padding:9px;
+     border-radius: 50%;
+     width:20px;
+     height:20px;
+     overflow:hidden;
+     border:1px solid #fff;
+     background-color:rgba(255,255,255,0.1);
+   }
+
+   header .title .back svg {
+     width:28px;
+     height:28px;
+   }
+
+   header .title .back:hover {
+     background-color:rgba(255,255,255,0.4);
+   }
+
+   a {
+     cursor:pointer;
+   }
+
+   .addFriends {
+
+       position:relative;
+       margin:20px 0 0;
+       padding:10px 20px;
+       text-decoration: none;
+       border:1px solid #000;
+       display:inline-block;
+       color:#000;
+       background:#fff;
+       font-family: calibri;
+       font-size: 1.2rem;
+       cursor: pointer;
+   }
+
+   .addFriends:hover {
+
+       position:relative;
+       margin:20px 0 0;
+       padding:10px 20px;
+       text-decoration: none;
+       border:1px solid #000;
+       display:inline-block;
+       color:#fff;
+       background:#000;
+       font-family: calibri;
+       font-size: 1.2rem;
+       cursor: pointer;
+   }
+
+   script {
+     display:none;
+   }
+
+   @media (max-width:500px){
+
+  strong, p, h1, h2, h3, b, body, pre, a, th, td, div, span, input, textarea, tr, button, center{
+    font-size:2rem;
+  }
+
+  .container .name .nam {
+    font-size:2rem;
+  }
+
+  i {
+    font-size:1.6rem;
+  }
+
+}
+
+@media (max-width:500px){
+
+  strong, p, h1, h2, h3, b, body, pre, a, th, td, div, span, input, textarea, tr, button, center{
+    font-size:2rem;
+  }
+
+  container textarea {
+    font-size:40px;
+  }
+
+   a,  input {
+    font-size:2rem;
+  }
+
+  * {
+    font-size:40px;
+  }
+
+  i {
+    font-size:1.6rem;
+  }
+
+  header {
+    display:none;
+  }
+
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="title">
+      <a onclick='history.back()'  class='back' ><svg width="55px" height="55px" xmlns="http://www.w3.org/2000/svg" fill-rule="none" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" clip-rule="none"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z" style='stroke:#fff;'/></svg></a>
+      <h1>Friends</h1>
+      <span class="clock">
+        <h4 class="clock-time"></h4>
+      </span>
+    </div>
+  </header>
+
+  <div class="main">
+
+    <!-- - - - - - - - - - -start - - - - - - - - -->
+
+    <div class="container">
+  <a href="chatBox.html">
+    <div class="prsn">
+      <div class="pic">
+        <img src="mmm.jpg" alt="" class="profile_picture">
+      </div>
+      <div class="name">
+        <p class="nam">
+          demo <strong class="status"></strong>
+        </p>
+      </div>
+    </div>
+  </a>
+
+<!-- - - - - - - - - - - - -1st ----------->
+
+    <a href="chatBox.html">
+    <div class="prsn">
+      <div class="pic">
+        <img src="mmm.jpg" alt="" class="profile_picture">
+      </div>
+      <div class="name">
+        <p class="nam">
+          demo <strong class="status"></strong>
+        </p>
+      </div>
+    </div>
+  </a>
+
+<!-- - - - - - - - - - - - -2nd ----------->
+
+    <a href="chatBox.html">
+    <div class="prsn">
+      <div class="pic">
+        <img src="mmm.jpg" alt="" class="profile_picture">
+      </div>
+      <div class="name">
+        <p class="nam">
+          demo <strong class="status"></strong>
+        </p>
+      </div>
+    </div>
+  </a>
+
+<!-- - - - - - - - - - - - -3rd ----------->
+
+    <a href="chatBox.html">
+    <div class="prsn">
+      <div class="pic">
+        <img src="mmm.jpg" alt="" class="profile_picture">
+      </div>
+      <div class="name">
+        <p class="nam">
+          demo <strong class="status"></strong>
+        </p>
+      </div>
+    </div>
+  </a>
+
+<!-- - - - - - - - - - - - -4th ----------->
+
+  <a href="chatBox.html">
+    <div class="prsn">
+      <div class="pic">
+        <img src="mmm.jpg" alt="" class="profile_picture">
+      </div>
+      <div class="name">
+        <p class="nam">
+          demo <strong class="status"></strong>
+        </p>
+      </div>
+    </div>
+  </a>
+
+<!-- - - - - - - - - - - - -5th ----------->
+
+  <a href="chatBox.html">
+    <div class="prsn">
+      <div class="pic">
+        <img src="mmm.jpg" alt="" class="profile_picture">
+      </div>
+      <div class="name">
+        <p class="nam">
+          demo <strong class="status"></strong>
+        </p>
+      </div>
+    </div>
+  </a>
+
+<!-- - - - - - - - - - - - -6th ----------->
+
+    <a href="chatBox.html">
+    <div class="prsn">
+      <div class="pic">
+        <img src="mmm.jpg" alt="" class="profile_picture">
+      </div>
+      <div class="name">
+        <p class="nam">
+          demo <strong class="status"></strong>
+        </p>
+      </div>
+    </div>
+  </a>
+
+<!-- - - - - - - - - - - - -7th ----------->
+
+  <a href="chatBox.html">
+    <div class="prsn">
+      <div class="pic">
+        <img src="mmm.jpg" alt="" class="profile_picture">
+      </div>
+      <div class="name">
+        <p class="nam">
+          demo <strong class="status"></strong>
+        </p>
+      </div>
+    </div>
+  </a>
+
+<!-- - - - - - - - - - - - -8th ----------->
+
+    <a href="chatBox.html">
+    <div class="prsn">
+      <div class="pic">
+        <img src="mmm.jpg" alt="" class="profile_picture">
+      </div>
+      <div class="name">
+        <p class="nam">
+          demo <strong class="status"></strong>
+        </p>
+      </div>
+    </div>
+  </a>
+
+    </div>
+
+    <!-- - - - - - - - - - -end - - - - - - - - -->
+
+
+  </div>
+
+  <!-- - - - - -  - - - -  - - -  - script clock - - - - - - - - - - - - -->
+
+  <script src='C:\Users\nelson khoza\Desktop\New folder (2)\home\all.js'></script>
+
+<!-- - - - - -  - - - -  - - -  - script main- - - - - - - - - - - - -->
+
+  <script type="text/javascript">
+
+    var friends = document.querySelector('.container').innerHTML;
+
+    if(friends == ''){
+      document.querySelector('.container').innerHTML = '<center><p>You have no friends yet</p><a class="addFriends">Add friends</a><br /><br /><br /><p>If your friends are not using Microgram</p><a class="addFriends">Invite friends</button></a>';
+    }
+
+
+
+  </script>
+</body>
+</html>

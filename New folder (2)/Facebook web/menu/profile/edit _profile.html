@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+body{
+background:#00ffff;
+}
+
+#edit{
+display:;
+}
+
+h1{
+font-size:2.5em;
+}
+
+#change_pp{
+padding: 12px;
+border: 1px solid #000000;
+color: black;
+cursor: pointer;
+/*background-color:#ffffff;*/
+width: 700px;
+border-radius: 50px;
+font-size:2em;
+juatify-content:center;
+}
+
+.input1 {
+border-radius: 2px;
+text-align: left;
+font-size: 10px;
+padding: 11px solid black;
+margin: 11px;
+width: 950px;
+height: 50px;
+font-size:2em;
+border:1px solid black;
+}
+
+.input2 {
+border-radius: 2px;
+text-align: left;
+font-size: 10px;
+padding: 11px solid black;
+margin: 11px;
+width: 950px;
+height: 300px;
+font-size:2em;
+border:1px solid black;
+
+}
+
+#change_pp_button{
+justify-content:center;
+text-align:center;
+align-items:center; 
+}
+
+.edit_{
+margin:50px;
+padding: 12px;
+border: 1px solid #000000;
+color: black;
+cursor: pointer;
+/*background-color:#ffffff;*/
+width: 350px;
+border-radius: 50px;
+font-size:2em;
+juatify-content:center;
+}
+
+#exit_and_done{
+justify-content:center;
+/*border:1px solid black;*/
+text-align:center;
+align-items:center;
+}
+
+.edit_, .input2, .input1, #change_pp {
+background-color:rgba(250,250,250,0.5);
+opacity:;
+}
+
+#lab {
+display:none;
+}
+</style>
+</head>
+<body>
+
+<span id="exit_comment_span">
+
+</span>
+
+<section id="edit">
+<h1>Profile picture</h1>
+<div id="change_pp_button">
+
+<input type="file" id="lab">
+
+<label for="lab" id="change_pp" onclick="change_pp()">Change profile picture</label>
+
+</div>
+
+<h1>Name</h1>
+<input type="text" class="input1" placeholder="Please write your name" name="name">
+
+<h1>Surname</h1>
+<input type="text" class="input1" placeholder="Please write your name" name="surmame">
+
+<h1>Bio</h1>
+<textarea type="text" class="input2" placeholder="Please write something about yourself" name="surmame"></textarea>
+
+<div id="exit_and_done">
+<button class="edit_">Done</button>
+
+</div>
+
+</section>
+</body>
+</html>

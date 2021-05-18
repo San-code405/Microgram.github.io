@@ -1,0 +1,224 @@
+/* WARNING: copyright 2021. Any distribution, editing or unauthorised use is strictly prohibited */
+.body {
+height:100%;
+background-size:cover;
+font-family: calibri;
+color:inherit;
+}
+
+#value, #rgb {
+outline:none;
+text-align: center;
+border:4px solid #00f;
+border-radius:5px;
+height:40px;
+font-family:consolar, "courier";
+font-style: normal;
+font-weight: bold;
+font-size:15px;
+box-shadow:2px 2px 10px 2px rgb(166, 166, 255);
+}
+.body #container {
+width:200px;
+height:300px;
+border-radius:0px;
+background-color:#00f;
+box-shadow:0 0 10px rgba(0, 0, 0.1);
+}
+.body #color {
+outline: none;
+border:1px solid ##00f;
+border-radius:5px;
+height:40px;
+width:160px;
+box-shadow:2px 2px 10px 2px rgb(166, 166, 255);
+}
+.body h2 {
+color:#000;
+font-family: courier;
+}
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --->
+
+
+* {
+  outline: none;
+  color:inherit;
+  text-decoration:none;
+  font-family: calibri;
+  font-size: 1.5rem;
+}
+
+.body_{
+width:100%;
+border:1px solid #fffff;
+margin:0;
+padding:0;
+background:#f5f5f5;
+border-color:rgba(250,250,250,0.0);
+}
+
+/*---- -- - theNavigator - - - - - - -  --- - -- -- -----*/
+
+.body_ .button {
+    background-color: rgb(0,0,0,0.0);
+    border: 1px solid rgba(255, 255, 255, 0.0);
+    color: white;
+    padding:0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    /*font-size:15px;*/
+    cursor: pointer;
+    width:30%;
+    height:20px;
+    opacity:9;
+    overflow:hidden;
+}
+
+.body_ .button:hover {
+
+border:1px solid #000000;
+background-color:rgba(255, 255, 255, 0.2);
+
+}
+
+.body_ #span1 {
+display:flex;
+top:0;
+left:0;
+width:100%;
+background-color:rgba(255,255,255,0.1);
+}
+
+.body_ #the_comment_section {
+display:flex;
+position:relative;
+background-color:rgba(250,250,250,0.0);
+margin:0;
+padding:0;
+height:30px;
+width:100%;
+left:0;
+border-bottom:1px solid #000000;
+}
+
+.body_ #write_a_comment {
+position:block;
+bottom:0;
+left:;
+padding: 0;
+border:none;
+color: black;
+cursor: pointer;
+width: calc(100% - 20px);
+height:10px;
+font-size: 8px;
+border-radius:none;
+/*font-size:100%;*/
+juatify-content:center;
+background-color:rgba(250,250,250,0.0);
+resize: none;
+}
+
+.body_ #pictures{
+
+display:inherit;
+
+}
+
+.body_ .result_{
+
+width:200px;
+height:190px;
+margin:10px;
+border:1px solid black;
+padding:0px;
+
+}
+
+.body_ #write_a_comment_ {
+
+display:flex;
+overflow:hidden;
+width: inherit;
+height:14px;
+border-radius: 7px;
+border:0.01px solid black;
+margin:0px;
+background-color:rgba(250,250,250,0.2)
+
+}
+
+.body_ #send_a_comment {
+position:relative;
+right:0;
+bottom:0;
+height:inherit;
+width:10px;
+top:0;
+}
+
+.body_ #change_profilePicture, #send_a_comment {
+background-color:rgba(250,250,250,0.0);
+border:none;
+cursor: pointer;
+}
+
+.body_ #change_profilePicture {
+  position: relative;
+margin-left: 10px;
+border:none;
+height:10px;
+width:10px;
+resize: none;
+}
+
+
+.body_ #paper_clip_comment {
+height:95px;
+width:141px;
+padding:0;
+}
+
+.body_ #thecommendbox {
+max-width:100%;
+background-color:rgba(255,255,255,0.3);
+/*font-size:2em;*/
+
+}
+
+.body_ #navy {
+width:100%;
+background-color:#00bfff;
+}
+
+.body_ input {
+display: none;
+}
+
+.body_ #span1 a {
+  display:none;
+}
+
+
+.body_ label {
+  cursor: pointer;
+}
+
+.body_ #fomm {
+margin:none;
+padding:none;
+border:none;
+width:calc(100% - 6px);
+background:none;
+}
+
+.body_ #SVGG {
+  margin-top:43px;
+  margin-left:0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  transform:rotate(45deg);
+}
+/* WARNING: copyright 2021. Any distribution, editing or unauthorised use is strictly prohibited */

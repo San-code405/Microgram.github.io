@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
+
+  <style type="text/css">
+
+  html{
+  scroll-behavior: smooth;
+  }
+
+  body {
+  margin:0;
+  padding:0;
+  background-size: cover;
+  height:auto;
+  background-color:#aaa;
+  display: flex;
+  align-items: center;
+  justify-content:;
+  font-family: 'Ubuntu', sans-serif;
+  flex-direction: column;
+  }
+
+  script {
+    display:none;
+  }
+
+  .container {
+  border-radius:4px;
+  padding-top:30px;
+  width:300px;
+  height:50px;
+  background-color:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  }
+  .main {
+  border-radius:4px;
+  width:300px;
+  height:;
+  background-color:#fff;
+  box-shadow:0px 0px 20px rgba(0,0,0,0.4);
+  position: relative;
+  transform: translateY(60px);
+  }
+  .container .input input {
+  width:250px;
+  height:auto;
+  outline: none;
+  border:none;
+  border-bottom:1.5px solid rgba(0,0,0,0.2);
+  font-size:15px;
+  font-family: 'Ubuntu', sans-serif;
+  padding-bottom: 7px;
+  transition: all 0.3s ease;
+
+  }
+  .container label {
+  position: absolute;
+  left:25px;
+  bottom:20px;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-size:15px;
+  }
+  .container .input input:focus ~ label,
+  .container .input input:valid ~ label {
+  transform: translateY(-20px);
+  color: #6200ff;
+  font-size:12px;
+  }
+  .container .input input:focus,
+  .container .input input:valid {
+  border-bottom:1.5px solid #6200ff;
+  }
+
+  .button {
+  width:;
+  height:;
+  font-family: 'Ubuntu', sans-serif;
+  background:linear-gradient(-135deg, #6200ff, #8800c7);
+  color:#fff;
+  border:none;
+  margin:0;
+  padding:10px;
+  border-radius:2px;
+  text-decoration: none;
+  }
+
+  .btn1 {
+  position: absolute;
+  right:25px;
+  bottom:20px;
+  }
+
+  #the_next_page {
+  display: none;
+  }
+
+  .alert {
+  color:#ff0000;
+  }
+
+  #submit {
+    display: none;
+  }
+
+  </style>
+  </head>
+  <body>
+
+  <form action="" method="POST" name="login">
+  <div id="main" class="main">
+
+  <div class="container">
+  <div class="input">
+  <input name="email" type="text" autocomplete="email" required>
+  <label>E-mail or phone number</label>
+  </div>
+  </div>
+
+  <p class="alert" id="feedback"></p>
+  <div class="container">
+  <div class="input">
+  <input name="password" type="password" id="password" oninput="abnoy()" required>
+  <label>Password</label>
+  </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  <div class="btn1">
+
+    <a href='dowww.html' id="" class="button">Cancel</a>
+
+  <input type="submit" id="next" class="button" content='Sign-up' />
+
+  </div>
+  </div>
+  <br /><br /><br /><br /><br /><br />
+  <!-- - - - - - - - - - - - - the next page - - - - - - - - - -->
+
+
+  </form>
+
+
+</body>
+</html>
